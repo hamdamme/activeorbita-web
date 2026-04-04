@@ -11,7 +11,7 @@ export default function AboutPage() {
         </h1>
 
         <p className="mt-6 text-lg leading-8 text-slate-600">
-          Active Orbit INC is focused on wholesale and export business solutions,
+          Active Orbit INC is based in ILLINOIS and is focused on wholesale and export business solutions,
           helping partners build reliable supply relationships and expand into
           broader markets with confidence.
         </p>
