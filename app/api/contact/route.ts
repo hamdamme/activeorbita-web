@@ -35,14 +35,22 @@ export async function POST(request: Request) {
     });
 
     if (error) {
-      return NextResponse.json({ error }, { status: 500 });
-    }
+  return NextResponse.json(
+    { error: error.message || "Failed to send email." },
+    { status: 500 }
+  );
+}
 
     return NextResponse.json({ success: true, data });
   } catch (error) {
-    return NextResponse.json(
-      { error: "Something went wrong while sending the email." },
-      { status: 500 }
-    );
-  }
+  return NextResponse.json(
+    {
+      error:
+        error instanceof Error
+          ? error.message
+          : "Something went wrong while sending the email.",
+    },
+    { status: 500 }
+  );
+}
 }
