@@ -102,11 +102,11 @@ export default function ContactPage() {
             </p>
             <p>
               <span className="font-semibold text-slate-900">Email:</span>{" "}
-              contact@activeorbitinc.com
+              info@activeorbita.com
             </p>
             <p>
               <span className="font-semibold text-slate-900">Phone:</span>{" "}
-              +1 (000) 000-0000
+              +1 (773) 882-5595
             </p>
             <p>
               <span className="font-semibold text-slate-900">Business:</span>{" "}
