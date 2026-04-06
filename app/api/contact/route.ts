@@ -1,5 +1,6 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
+import { supabase } from "@/lib/supabase";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -19,9 +20,25 @@ export async function POST(request: Request) {
       );
     }
 
+    const { error: dbError } = await supabase.from("contact_messages").insert([
+      {
+        name,
+        email,
+        company: company || null,
+        message,
+      },
+    ]);
+
+    if (dbError) {
+      return NextResponse.json(
+        { error: dbError.message || "Failed to save contact message." },
+        { status: 500 }
+      );
+    }
+
     const { data, error } = await resend.emails.send({
-      from: "Active Orbit INC <info@activeorbita.com>",
-      to: ["info@activeorbita.com"],
+      from: "Active Orbit INC <contact@activeorbita.com>",
+      to: ["your-destination-email@example.com"],
       subject: `New inquiry from ${name}`,
       replyTo: email,
       html: `
@@ -35,22 +52,22 @@ export async function POST(request: Request) {
     });
 
     if (error) {
-  return NextResponse.json(
-    { error: error.message || "Failed to send email." },
-    { status: 500 }
-  );
-}
+      return NextResponse.json(
+        { error: error.message || "Failed to send email." },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json({ success: true, data });
   } catch (error) {
-  return NextResponse.json(
-    {
-      error:
-        error instanceof Error
-          ? error.message
-          : "Something went wrong while sending the email.",
-    },
-    { status: 500 }
-  );
-}
+    return NextResponse.json(
+      {
+        error:
+          error instanceof Error
+            ? error.message
+            : "Something went wrong while processing the contact form.",
+      },
+      { status: 500 }
+    );
+  }
 }
