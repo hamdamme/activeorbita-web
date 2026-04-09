@@ -1,6 +1,32 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
-import { supabase } from "@/lib/supabase";
+import { createClient } from "@supabase/supabase-js";
+
+export async function POST(req: Request) {
+  const body = await req.json();
+
+  const supabase = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  );
+
+  const { error } = await supabase.from("contact_messages").insert([
+    {
+      name: body.name,
+      email: body.email,
+      company: body.company || null,
+      message: body.message,
+    },
+  ]);
+
+  console.log("INSERT ERROR:", error);
+
+  if (error) {
+    return Response.json({ error }, { status: 500 });
+  }
+
+  return Response.json({ success: true });
+}
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
