@@ -20,14 +20,19 @@ export async function POST(request: Request) {
       );
     }
 
-    const { error: dbError } = await supabase.from("contact_messages").insert([
-      {
-        name,
-        email,
-        company: company || null,
-        message,
-      },
-    ]);
+    const { data: insertedRow, error: dbError } = await supabase
+  .from("contact_messages")
+  .insert([
+    {
+      name,
+      email,
+      company: company || null,
+      message,
+    },
+  ])
+  .select();
+
+console.log("SUPABASE INSERT RESULT:", { insertedRow, dbError });
 
     if (dbError) {
       return NextResponse.json(
