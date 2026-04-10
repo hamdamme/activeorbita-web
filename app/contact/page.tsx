@@ -75,149 +75,163 @@ export default function ContactPage() {
   }
 
   return (
-    <main className="mx-auto min-h-screen max-w-7xl px-6 py-16 lg:px-12">
-      <div className="max-w-3xl">
-        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">
-          Contact
-        </p>
-
-        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-          Let’s discuss your business needs
-        </h1>
-
-        <p className="mt-6 text-lg leading-8 text-slate-600">
-          Reach out to Active Orbit INC for wholesale inquiries, export
-          coordination, product requests, or partnership opportunities.
-        </p>
-      </div>
-
-      <div className="mt-12 grid gap-8 lg:grid-cols-2">
-        <div className="rounded-2xl border border-slate-200 p-6">
-          <h2 className="text-2xl font-semibold">Contact information</h2>
-
-          <div className="mt-6 space-y-4 text-slate-600">
-            <p>
-              <span className="font-semibold text-slate-900">Company:</span>{" "}
-              Active Orbit INC
+    <main className="bg-white text-gray-900">
+      <section className="border-b border-gray-200 bg-gradient-to-b from-gray-50 to-white">
+        <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-gray-500">
+              Contact
             </p>
-            <p>
-              <span className="font-semibold text-slate-900">Email:</span>{" "}
-              info@activeorbita.com
-            </p>
-            <p>
-              <span className="font-semibold text-slate-900">Phone:</span>{" "}
-              +1 (773) 882-5595
-            </p>
-            <p>
-              <span className="font-semibold text-slate-900">Business:</span>{" "}
-              Wholesale, export, and trade support
+            <h1 className="mt-6 text-4xl font-semibold leading-tight sm:text-5xl">
+              Connect with Active Orbit INC for business inquiries
+            </h1>
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              We welcome conversations related to wholesale distribution, export
+              opportunities, product inquiries, and long-term business partnerships.
             </p>
           </div>
         </div>
+      </section>
 
-        <div className="rounded-2xl border border-slate-200 p-6">
-          <h2 className="text-2xl font-semibold">Send us a message</h2>
+      <section className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+        <div className="grid gap-8 lg:grid-cols-2">
+          <div className="rounded-[2rem] border border-gray-200 bg-white p-8 shadow-sm">
+            <h2 className="text-2xl font-semibold">Business Information</h2>
 
-          <form onSubmit={handleSubmit} className="mt-6 space-y-5">
-            <div>
-              <label
-                htmlFor="name"
-                className="mb-2 block text-sm font-medium text-slate-900"
-              >
-                Full name
-              </label>
-              <input
-                id="name"
-                name="name"
-                type="text"
-                placeholder="Your full name"
-                value={formData.name}
-                onChange={handleChange}
-                className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none transition focus:border-slate-500"
-                required
-              />
+            <div className="mt-8 space-y-5 text-gray-700">
+              <div className="rounded-2xl bg-gray-50 px-5 py-4">
+                <span className="block text-sm font-medium text-gray-500">
+                  Company
+                </span>
+                <span className="mt-1 block text-base font-medium">
+                  Active Orbit INC
+                </span>
+              </div>
+
+              <div className="rounded-2xl bg-gray-50 px-5 py-4">
+                <span className="block text-sm font-medium text-gray-500">
+                  Email
+                </span>
+                <span className="mt-1 block text-base font-medium">
+                  contact@activeorbita.com
+                </span>
+              </div>
+
+              <div className="rounded-2xl bg-gray-50 px-5 py-4">
+                <span className="block text-sm font-medium text-gray-500">
+                  Business Focus
+                </span>
+                <span className="mt-1 block text-base font-medium">
+                  Wholesale distribution and global export of automotive products
+                </span>
+              </div>
             </div>
+          </div>
 
-            <div>
-              <label
-                htmlFor="email"
-                className="mb-2 block text-sm font-medium text-slate-900"
+          <div className="rounded-[2rem] border border-gray-200 bg-white p-8 shadow-sm">
+            <h2 className="text-2xl font-semibold">Send an Inquiry</h2>
+
+            <form onSubmit={handleSubmit} className="mt-8 space-y-5">
+              <div>
+                <label
+                  htmlFor="name"
+                  className="mb-2 block text-sm font-medium text-gray-700"
+                >
+                  Full name
+                </label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Your full name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="w-full rounded-2xl border border-gray-300 px-4 py-3 outline-none transition focus:border-gray-900"
+                  required
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="email"
+                  className="mb-2 block text-sm font-medium text-gray-700"
+                >
+                  Email address
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="you@example.com"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full rounded-2xl border border-gray-300 px-4 py-3 outline-none transition focus:border-gray-900"
+                  required
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="company"
+                  className="mb-2 block text-sm font-medium text-gray-700"
+                >
+                  Company
+                </label>
+                <input
+                  id="company"
+                  name="company"
+                  type="text"
+                  placeholder="Your company name"
+                  value={formData.company}
+                  onChange={handleChange}
+                  className="w-full rounded-2xl border border-gray-300 px-4 py-3 outline-none transition focus:border-gray-900"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="message"
+                  className="mb-2 block text-sm font-medium text-gray-700"
+                >
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={6}
+                  placeholder="Tell us about your request"
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="w-full rounded-2xl border border-gray-300 px-4 py-3 outline-none transition focus:border-gray-900"
+                  required
+                />
+              </div>
+
+              <button
+                type="submit"
+                disabled={status.type === "loading"}
+                className="rounded-full bg-gray-900 px-6 py-3 text-sm font-medium text-white transition hover:bg-gray-700 disabled:cursor-not-allowed disabled:opacity-60"
               >
-                Email address
-              </label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                placeholder="you@example.com"
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none transition focus:border-slate-500"
-                required
-              />
-            </div>
+                {status.type === "loading" ? "Sending..." : "Submit Inquiry"}
+              </button>
 
-            <div>
-              <label
-                htmlFor="company"
-                className="mb-2 block text-sm font-medium text-slate-900"
-              >
-                Company
-              </label>
-              <input
-                id="company"
-                name="company"
-                type="text"
-                placeholder="Your company name"
-                value={formData.company}
-                onChange={handleChange}
-                className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none transition focus:border-slate-500"
-              />
-            </div>
-
-            <div>
-              <label
-                htmlFor="message"
-                className="mb-2 block text-sm font-medium text-slate-900"
-              >
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows={6}
-                placeholder="Tell us about your request"
-                value={formData.message}
-                onChange={handleChange}
-                className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none transition focus:border-slate-500"
-                required
-              />
-            </div>
-
-            <button
-              type="submit"
-              disabled={status.type === "loading"}
-              className="rounded-xl bg-slate-900 px-5 py-3 text-sm font-medium text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
-            >
-              {status.type === "loading" ? "Sending..." : "Send inquiry"}
-            </button>
-
-            {status.type !== "idle" && (
-              <p
-                className={`text-sm ${
-                  status.type === "success"
-                    ? "text-green-600"
-                    : status.type === "error"
-                    ? "text-red-600"
-                    : "text-slate-600"
-                }`}
-              >
-                {status.message}
-              </p>
-            )}
-          </form>
+              {status.type !== "idle" && (
+                <p
+                  className={`text-sm ${
+                    status.type === "success"
+                      ? "text-green-600"
+                      : status.type === "error"
+                      ? "text-red-600"
+                      : "text-gray-600"
+                  }`}
+                >
+                  {status.message}
+                </p>
+              )}
+            </form>
+          </div>
         </div>
-      </div>
+      </section>
     </main>
   );
 }
