@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { products } from "@/app/data/products";
 
 export default function ProductsPage() {
@@ -27,9 +28,12 @@ export default function ProductsPage() {
 
             <p className="font-bold mb-4">{product.price}</p>
 
-            <button className="bg-black text-white px-4 py-2 rounded-xl">
-              View Details
-            </button>
+            <Link
+  href={`/products/${product.slug}`}
+  className="inline-block bg-black text-white px-4 py-2 rounded-xl"
+>
+  View Details
+</Link>
           </div>
         ))}
       </div>
