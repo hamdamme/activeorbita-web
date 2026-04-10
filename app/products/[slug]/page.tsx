@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { products } from "@/app/data/products";
 
@@ -15,32 +16,52 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
   }
 
   return (
-    <div className="max-w-5xl mx-auto px-6 py-16">
-      <div className="grid md:grid-cols-2 gap-10 items-start">
-        <div>
-          <img
-            src={product.image}
-            alt={product.name}
-            className="w-full h-[400px] object-cover rounded-2xl shadow-sm"
-          />
+    <div className="bg-white">
+      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
+        <div className="mb-8">
+          <Link
+            href="/products"
+            className="text-sm text-gray-500 underline underline-offset-4"
+          >
+            Back to Products
+          </Link>
         </div>
 
-        <div>
-          <p className="text-sm uppercase tracking-wide text-gray-500 mb-2">
-            {product.category}
-          </p>
+        <div className="grid gap-12 lg:grid-cols-2">
+          <div className="overflow-hidden bg-gray-100">
+            <img
+              src={product.image}
+              alt={product.name}
+              className="h-full w-full object-cover"
+            />
+          </div>
 
-          <h1 className="text-4xl font-bold mb-4">{product.name}</h1>
+          <div className="flex flex-col justify-center">
+            <p className="text-xs uppercase tracking-wide text-gray-500">
+              {product.category}
+            </p>
 
-          <p className="text-lg text-gray-600 mb-6">
-            {product.description}
-          </p>
+            <h1 className="mt-2 text-3xl font-semibold text-gray-900">
+              {product.name}
+            </h1>
 
-          <p className="text-2xl font-semibold mb-6">{product.price}</p>
+            <p className="mt-4 text-lg font-medium text-gray-900">
+              {product.price}
+            </p>
 
-          <button className="bg-black text-white px-6 py-3 rounded-xl hover:opacity-90 transition">
-            Contact Us
-          </button>
+            <p className="mt-6 text-base leading-7 text-gray-600">
+              {product.description}
+            </p>
+
+            <div className="mt-8">
+              <Link
+                href="/contact"
+                className="inline-flex rounded-none border border-gray-900 px-6 py-3 text-sm font-medium text-gray-900 transition hover:bg-gray-900 hover:text-white"
+              >
+                Request a Quote
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </div>
