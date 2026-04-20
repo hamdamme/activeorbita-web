@@ -31,10 +31,7 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
           <div className="overflow-hidden bg-gray-100">
             <img
               src={product.image}
-  alt={product.name}
-  onError={(e) => {
-    (e.currentTarget as HTMLImageElement).src = "/placeholder.jpg";
-  }}
+              alt={product.name}
               className="h-full w-full object-cover"
             />
           </div>

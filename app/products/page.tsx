@@ -23,10 +23,7 @@ export default function ProductsPage() {
               <div className="aspect-square w-full overflow-hidden bg-gray-100">
                 <img
                   src={product.image}
-  alt={product.name}
-  onError={(e) => {
-    (e.currentTarget as HTMLImageElement).src = "/placeholder.jpg";
-  }}
+                  alt={product.name}
                   className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
                 />
               </div>
