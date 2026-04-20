@@ -113,7 +113,7 @@ export default function ContactPage() {
                   Email
                 </span>
                 <span className="mt-1 block text-base font-medium">
-                  contact@activeorbita.com
+                  info@activeorbita.com
                 </span>
               </div>
 
