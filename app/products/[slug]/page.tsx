@@ -55,6 +55,32 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
             <p className="mt-6 text-base leading-7 text-gray-600">
               {product.description}
             </p>
+            <div className="mt-6 space-y-3 text-sm text-gray-700">
+                  {product.packaging && (
+                <p>
+                <span className="font-medium text-gray-900">Packaging:</span>{" "}
+      {product.packaging}
+    </p>
+  )}
+
+  {product.moq && (
+    <p>
+      <span className="font-medium text-gray-900">MOQ:</span> {product.moq}
+    </p>
+  )}
+
+  {product.specs && (
+    <div>
+      <p className="font-medium text-gray-900 mb-1">Specifications:</p>
+      <ul className="list-disc list-inside space-y-1">
+        {product.specs.map((spec, index) => (
+          <li key={index}>{spec}</li>
+        ))}
+      </ul>
+    </div>
+  )}
+</div>
+            
 
             <div className="mt-8">
               <Link
