@@ -79,14 +79,24 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
 </div>
             
 
-            <div className="mt-8">
-              <Link
-                href="/contact"
-                className="inline-flex rounded-none border border-gray-900 px-6 py-3 text-sm font-medium text-gray-900 transition hover:bg-gray-900 hover:text-white"
-              >
-                Request a Quote
-              </Link>
-            </div>
+          <div className="mt-8 flex gap-4">
+  <Link
+    href="/contact"
+    className="inline-flex rounded-none border border-gray-900 px-6 py-3 text-sm font-medium text-gray-900 transition hover:bg-gray-900 hover:text-white"
+  >
+    Request a Quote
+  </Link>
+
+  <a
+    href={`https://wa.me/7738825595?text=${encodeURIComponent(
+      product.whatsappMessage || `Hello, I am interested in ${product.name}.`
+    )}`}
+    target="_blank"
+    className="inline-flex rounded-none border border-green-600 px-6 py-3 text-sm font-medium text-green-600 transition hover:bg-green-600 hover:text-white"
+  >
+    WhatsApp
+  </a>
+</div>
           </div>
         </div>
       </div>
