@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { products } from "@/app/data/products";
 
 const services = [
   {
@@ -198,6 +199,60 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className="border-t border-gray-200 bg-white">
+  <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
+    <div className="mb-8 flex items-end justify-between gap-4">
+      <div>
+        <p className="text-sm uppercase tracking-wide text-gray-500">
+          Featured Products
+        </p>
+        <h2 className="mt-2 text-2xl font-semibold text-gray-900">
+          Selected motor oil products
+        </h2>
+      </div>
+
+      <Link
+        href="/products"
+        className="text-sm font-medium text-black underline underline-offset-4"
+      >
+        View All
+      </Link>
+    </div>
+
+    <div className="grid gap-8 md:grid-cols-3">
+      {products.slice(0, 3).map((product) => (
+        <div key={product.id}>
+          <div className="aspect-square overflow-hidden bg-gray-100">
+            <img
+              src={product.image}
+              alt={product.name}
+              className="h-full w-full object-cover"
+            />
+          </div>
+
+          <div className="mt-4">
+            <p className="text-xs uppercase tracking-wide text-gray-500">
+              {product.category}
+            </p>
+            <h3 className="mt-1 text-lg font-medium text-gray-900">
+              {product.name}
+            </h3>
+            <p className="mt-1 text-sm text-gray-600">
+              {product.shortDescription}
+            </p>
+
+            <Link
+              href={`/products/${product.slug}`}
+              className="mt-3 inline-block text-sm font-medium text-black underline underline-offset-4"
+            >
+              View
+            </Link>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
     </main>
   );
 }
