@@ -107,7 +107,7 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
     )}
   </div>
 
-  {product.specs?.length > 0 && (
+  {product.specs && product.specs.length > 0 && (
     <div className="mt-6">
       <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-900">
         Key Features
