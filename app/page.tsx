@@ -220,7 +220,7 @@ export default function Home() {
     </div>
 
     <div className="grid gap-8 md:grid-cols-3">
-      {products.slice(0, 3).map((product) => (
+      {products.filter((product) => product.featured).slice(0, 3).map((product) => (
         <div key={product.id}>
           <div className="aspect-square overflow-hidden bg-gray-100">
             <img
