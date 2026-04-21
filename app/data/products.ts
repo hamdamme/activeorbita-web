@@ -11,6 +11,7 @@ export type Product = {
   specs?: string[];
   packaging?: string;
   moq?: string;
+  whatsappMessage?: string;
 };
 
 export const products: Product[] = [
@@ -26,6 +27,7 @@ export const products: Product[] = [
     packaging: "5 Quart Bottle",
     moq: "100 Cases",
     specs: ["Full Synthetic", "5W-30", "API Certified"],
+    whatsappMessage: "Hello, I am interested in Synthetic Motor Oil 5QT.",
   },
   {
     id: "2",
@@ -39,6 +41,7 @@ export const products: Product[] = [
     packaging: "1 Quart Bottle",
     moq: "200 Cases",
     specs: ["Full Synthetic", "5W-30"],
+    whatsappMessage: "Hello, I am interested in Synthetic Motor Oil 5QT.",
   },
   {
     id: "3",
@@ -65,6 +68,7 @@ export const products: Product[] = [
     packaging: "6 Bottles x 1QT",
     moq: "120 Cases",
     specs: ["Retail Ready", "Compact Packaging"],
+    whatsappMessage: "Hello, I am interested in Synthetic Motor Oil 5QT.",
   },
   {
     id: "5",
@@ -78,6 +82,7 @@ export const products: Product[] = [
     packaging: "12 Bottles x 1QT",
     moq: "100 Cases",
     specs: ["Bulk Retail", "Export Ready"],
+    whatsappMessage: "Hello, I am interested in Synthetic Motor Oil 5QT.",
   },
   {
     id: "6",
@@ -104,6 +109,7 @@ export const products: Product[] = [
     packaging: "24 Bottles x 1QT",
     moq: "60 Cases",
     specs: ["High Volume", "Export Ready"],
+    whatsappMessage: "Hello, I am interested in Synthetic Motor Oil 5QT.",
   },
   {
     id: "8",
@@ -117,6 +123,7 @@ export const products: Product[] = [
     packaging: "5 Quart Bottle",
     moq: "100 Cases",
     specs: ["Synthetic Blend"],
+    whatsappMessage: "Hello, I am interested in Synthetic Motor Oil 5QT.",
   },
   {
     id: "9",
@@ -130,6 +137,7 @@ export const products: Product[] = [
     packaging: "1 Quart Bottle",
     moq: "200 Cases",
     specs: ["Synthetic Blend"],
+    whatsappMessage: "Hello, I am interested in Synthetic Motor Oil 5QT.",
   },
   {
     id: "10",
@@ -143,5 +151,6 @@ export const products: Product[] = [
     packaging: "6 Bottles x 5QT",
     moq: "50 Cases",
     specs: ["Bulk Supply"],
+    whatsappMessage: "Hello, I am interested in Synthetic Motor Oil 5QT.",
   },
 ];
