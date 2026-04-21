@@ -8,9 +8,15 @@ export type Product = {
   image: string;
   category: string;
   featured?: boolean;
-  specs?: string[];
   packaging?: string;
   moq?: string;
+  viscosity?: string;
+  oilType?: string;
+  apiRating?: string;
+  sku?: string;
+  unitSize?: string;
+  unitsPerCase?: string;
+  specs?: string[];
   whatsappMessage?: string;
 };
 
