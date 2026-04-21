@@ -52,26 +52,72 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
             <p className="mt-6 text-base leading-7 text-gray-600">
               {product.description}
             </p>
-            <div className="mt-6 space-y-3 text-sm text-gray-700">
-                  {product.packaging && (
-                <p>
-                <span className="font-medium text-gray-900">Packaging:</span>{" "}
-      {product.packaging}
-    </p>
-  )}
+           <div className="mt-8 border-t border-gray-200 pt-6">
+  <h2 className="text-sm font-semibold uppercase tracking-wide text-gray-900">
+    Product Details
+  </h2>
 
-  {product.moq && (
-    <p>
-      <span className="font-medium text-gray-900">MOQ:</span> {product.moq}
-    </p>
-  )}
+  <div className="mt-4 grid gap-y-3 text-sm text-gray-700 sm:grid-cols-2 sm:gap-x-8">
+    {product.sku && (
+      <div>
+        <span className="font-medium text-gray-900">SKU:</span> {product.sku}
+      </div>
+    )}
 
-  {product.specs && (
-    <div>
-      <p className="font-medium text-gray-900 mb-1">Specifications:</p>
-      <ul className="list-disc list-inside space-y-1">
+    {product.oilType && (
+      <div>
+        <span className="font-medium text-gray-900">Oil Type:</span> {product.oilType}
+      </div>
+    )}
+
+    {product.viscosity && (
+      <div>
+        <span className="font-medium text-gray-900">Viscosity:</span> {product.viscosity}
+      </div>
+    )}
+
+    {product.apiRating && (
+      <div>
+        <span className="font-medium text-gray-900">API Rating:</span> {product.apiRating}
+      </div>
+    )}
+
+    {product.unitSize && (
+      <div>
+        <span className="font-medium text-gray-900">Unit Size:</span> {product.unitSize}
+      </div>
+    )}
+
+    {product.unitsPerCase && (
+      <div>
+        <span className="font-medium text-gray-900">Units / Case:</span> {product.unitsPerCase}
+      </div>
+    )}
+
+    {product.packaging && (
+      <div>
+        <span className="font-medium text-gray-900">Packaging:</span> {product.packaging}
+      </div>
+    )}
+
+    {product.moq && (
+      <div>
+        <span className="font-medium text-gray-900">MOQ:</span> {product.moq}
+      </div>
+    )}
+  </div>
+
+  {product.specs?.length > 0 && (
+    <div className="mt-6">
+      <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-900">
+        Key Features
+      </h3>
+
+      <ul className="mt-3 space-y-2 text-sm text-gray-700">
         {product.specs.map((spec, index) => (
-          <li key={index}>{spec}</li>
+          <li key={index} className="border-b border-gray-100 pb-2">
+            {spec}
+          </li>
         ))}
       </ul>
     </div>
