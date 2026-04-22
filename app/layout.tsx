@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Active Orbit INC",
   description:
-    "Wholesale distribution and global export of automotive products.",
+  "Wholesale automotive products for commercial supply and distribution.",
 };
 
 export default function RootLayout({
@@ -57,7 +57,7 @@ export default function RootLayout({
               <div>
                 <p className="text-base font-semibold">Active Orbit INC</p>
                 <p className="mt-2 text-sm text-gray-600">
-                  Wholesale distribution and global export of automotive products.
+                  Wholesale automotive products for commercial supply and distribution.
                 </p>
               </div>
 

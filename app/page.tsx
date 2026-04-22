@@ -21,7 +21,7 @@ const services = [
 
 const advantages = [
   "Professional and dependable business communication",
-  "International wholesale and export focus",
+  "Wholesale supply, Bulk distribution, Commercial automotive products",
   "Structured operations with modern digital workflows",
   "Scalable foundation for product catalog and online ordering",
 ];
@@ -76,7 +76,7 @@ export default function Home() {
                 <div className="rounded-2xl bg-gray-50 p-6">
                   <p className="text-sm font-medium text-gray-500">Model</p>
                   <p className="mt-3 text-xl font-semibold">
-                    Global Export Partnerships
+                    Commercial automotive products
                   </p>
                 </div>
 
@@ -122,7 +122,7 @@ export default function Home() {
               Core Capabilities
             </p>
             <h2 className="text-3xl font-semibold sm:text-4xl">
-              Structured solutions for wholesale and export operations
+              Structured solutions for wholesale and supply products operations
             </h2>
           </div>
 
