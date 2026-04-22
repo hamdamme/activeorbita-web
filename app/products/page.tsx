@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { products } from "@/app/data/products";
@@ -71,11 +72,13 @@ export default function ProductsPage() {
             {filteredProducts.map((product) => (
               <div key={product.id} className="group">
                 <div className="aspect-square w-full overflow-hidden bg-gray-100">
-                  <img
+                 <Image
                     src={product.image}
                     alt={product.name}
-                    className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
-                  />
+                    width={600}
+                    height={600}
+                     className="h-full w-full object-cover"
+                      />
                 </div>
 
                 <div className="mt-4">

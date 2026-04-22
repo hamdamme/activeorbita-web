@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { products } from "@/app/data/products";
+import Image from "next/image";
 
 type ProductPageProps = {
   params: {
@@ -29,11 +30,13 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
 
         <div className="grid gap-12 lg:grid-cols-2">
           <div className="overflow-hidden bg-gray-100">
-            <img
-              src={product.image}
-              alt={product.name}
-              className="h-full w-full object-cover"
-            />
+            <Image
+  src={product.image}
+  alt={product.name}
+  width={800}
+  height={800}
+  className="h-full w-full object-cover"
+/>
           </div>
 
           <div className="flex flex-col justify-center">
