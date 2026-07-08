@@ -2,115 +2,99 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useMemo, useState } from "react";
 import { products } from "@/app/data/products";
 
-const categories = ["All", ...Array.from(new Set(products.map((p) => p.category)))];
+const categories = Array.from(new Set(products.map((p) => p.category)));
 
 export default function ProductsPage() {
-  const [search, setSearch] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("All");
-
-  const filteredProducts = useMemo(() => {
-    return products.filter((product) => {
-      const matchesSearch =
-        product.name.toLowerCase().includes(search.toLowerCase()) ||
-        product.shortDescription.toLowerCase().includes(search.toLowerCase()) ||
-        product.description.toLowerCase().includes(search.toLowerCase()) ||
-        product.packaging?.toLowerCase().includes(search.toLowerCase()) ||
-        product.specs?.some((spec) =>
-          spec.toLowerCase().includes(search.toLowerCase())
-        );
-
-      const matchesCategory =
-        selectedCategory === "All" || product.category === selectedCategory;
-
-      return matchesSearch && matchesCategory;
-    });
-  }, [search, selectedCategory]);
-
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
+        {/* Header */}
         <div className="mb-12 border-b border-gray-200 pb-6">
-          <h1 className="text-3xl font-semibold text-gray-900">
-            Product Catalog
+          <h1 className="text-4xl font-bold text-gray-900">
+            Product Categories
           </h1>
-          <p className="mt-2 text-sm text-gray-600">
-            Wholesale automotive products for reliable supply and export operations.
+
+          <p className="mt-3 max-w-2xl text-base text-gray-600">
+            Choose a category to explore our wholesale product offerings.
           </p>
         </div>
 
-        <div className="mb-10 grid gap-4 md:grid-cols-[1fr_220px]">
-          <input
-            type="text"
-            placeholder="Search products, packaging, specs..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            className="w-full border border-gray-300 px-4 py-3 text-sm outline-none transition focus:border-gray-900"
-          />
+        {/* Categories */}
+        <div className="grid gap-8 md:grid-cols-3">
+          {categories.map((category) => {
+            const categorySlug = category
+              .toLowerCase()
+              .replace(/&/g, "and")
+              .replace(/[^a-z0-9]+/g, "-")
+              .replace(/^-|-$/g, "");
 
-          <select
-            value={selectedCategory}
-            onChange={(e) => setSelectedCategory(e.target.value)}
-            className="w-full border border-gray-300 px-4 py-3 text-sm outline-none transition focus:border-gray-900"
-          >
-            {categories.map((category) => (
-              <option key={category} value={category}>
-                {category}
-              </option>
-            ))}
-          </select>
-        </div>
+            const count = products.filter(
+              (product) => product.category === category
+            ).length;
 
-        {filteredProducts.length === 0 ? (
-          <div className="border border-gray-200 px-6 py-12 text-center">
-            <p className="text-sm text-gray-600">No products found.</p>
-          </div>
-        ) : (
-          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-            {filteredProducts.map((product) => (
-              <div key={product.id} className="group">
-                <div className="aspect-square w-full overflow-hidden bg-gray-100">
-                 <Image
-                    src={product.image}
-                    alt={product.name}
+            const image =
+              category === "Motor Oil & Transmission Fluids"
+                ? "/images/categories/motor-oil.png"
+                : category === "Auto Parts"
+                ? "/images/categories/auto-parts.png"
+                : "/images/categories/general-merchandise.png";
+
+            const description =
+              category === "Motor Oil & Transmission Fluids"
+                ? "Premium engine oils, transmission fluids, lubricants, and automotive chemicals for commercial fleets, distributors, and wholesale buyers."
+                : category === "Auto Parts"
+                ? "Quality replacement parts and maintenance components for passenger vehicles, trucks, and commercial fleets."
+                : "Wholesale general merchandise including personal care products, household essentials, and everyday retail items.";
+
+            return (
+              <Link
+                key={category}
+                href={`/products/category/${categorySlug}`}
+                className="group flex min-h-[560px] flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+              >
+                {/* Category Image */}
+                <div className="overflow-hidden bg-gray-50">
+                  <Image
+                    src={image}
+                    alt={category}
                     width={600}
-                    height={600}
-                     className="h-full w-full object-cover"
-                      />
+                    height={400}
+                    className="h-72 w-full object-contain p-6 transition-transform duration-300 group-hover:scale-105"
+                    priority
+                  />
                 </div>
 
-                <div className="mt-4">
-                  <p className="text-xs uppercase tracking-wide text-gray-500">
-                    {product.category}
-                  </p>
+                {/* Content */}
+                <div className="flex flex-1 flex-col justify-between p-8">
+                  <div>
+                    <h2 className="text-2xl font-bold text-gray-900">
+                      {category}
+                    </h2>
 
-                  <h2 className="mt-1 text-lg font-medium text-gray-900">
-                    {product.name}
-                  </h2>
+                    <p className="mt-5 text-sm leading-7 text-gray-600">
+                      {description}
+                    </p>
+                  </div>
 
-                  <p className="mt-1 text-sm text-gray-600">
-                    {product.shortDescription}
-                  </p>
+                  {/* Footer */}
+                  <div className="mt-10 border-t border-gray-200 pt-6">
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-500">
+                        {count} Products
+                      </span>
 
-                  <div className="mt-3 flex items-center justify-between">
-                    <span className="text-sm font-semibold text-gray-900">
-                      {product.price}
-                    </span>
-
-                    <Link
-                      href={`/products/${product.slug}`}
-                      className="text-sm font-medium text-black underline underline-offset-4"
-                    >
-                      View
-                    </Link>
+                      <span className="font-semibold text-black transition group-hover:translate-x-1">
+                        View Collection →
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        )}
+              </Link>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
