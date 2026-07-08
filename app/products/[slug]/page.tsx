@@ -31,7 +31,14 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
         <div className="grid gap-12 lg:grid-cols-2">
           <div className="overflow-hidden bg-gray-100">
             <Image
-  src={product.image}
+ src={
+  product.image ||
+  (product.category === "Motor Oil & Transmission Fluids"
+    ? "/images/products/motor-oil.png"
+    : product.category === "Auto Parts"
+    ? "/images/products/auto-parts.png"
+    : "/images/products/general-merchandise.png")
+}
   alt={product.name}
   width={800}
   height={800}
