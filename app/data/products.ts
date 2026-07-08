@@ -12,6 +12,7 @@ export type Product = {
   price: string;
   image: string;
   category: ProductCategory;
+  subcategory: string;
   featured?: boolean;
   packaging?: string;
   moq?: string;
@@ -36,6 +37,7 @@ export const products: Product[] = [
     price: "Request Quote",
     image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
+    subcategory: "Engine Oils",
     featured: true,
     packaging: "5 Quart Bottle",
     moq: "100 Cases",
@@ -58,6 +60,7 @@ export const products: Product[] = [
     price: "Request Quote",
     image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
+    subcategory: "Engine Oils",
     featured: true,
     packaging: "1 Quart Bottle",
     moq: "200 Cases",
@@ -80,6 +83,7 @@ export const products: Product[] = [
     price: "Request Quote",
     image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
+    subcategory: "Transmission Fluids",
     packaging: "1 Quart Bottle",
     moq: "100 Cases",
     sku: "AO-ATF-1QT",
@@ -98,6 +102,7 @@ export const products: Product[] = [
     price: "Request Quote",
     image: "/placeholder.jpg",
     category: "Auto Parts",
+    subcategory: "Brake System",
     moq: "50 Sets",
     sku: "AO-BP-001",
     specs: ["Durable Material", "Replacement Part", "Bulk Available"],
@@ -113,6 +118,7 @@ export const products: Product[] = [
     price: "Request Quote",
     image: "/placeholder.jpg",
     category: "Auto Parts",
+    subcategory: "Filters",
     moq: "100 Units",
     sku: "AO-OF-001",
     specs: ["Engine Protection", "Maintenance Item", "Wholesale Ready"],
@@ -128,6 +134,7 @@ export const products: Product[] = [
     price: "Request Quote",
     image: "/placeholder.jpg",
     category: "General Merchandise",
+    subcategory: "Personal Care",
     moq: "By Case",
     sku: "AO-GM-PC-001",
     specs: ["Retail Ready", "General Merchandise", "Bulk Supply"],
@@ -143,6 +150,7 @@ export const products: Product[] = [
     price: "Request Quote",
     image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
+    subcategory: "Engine Oils",
     packaging: "3 x 5 Quart Bottles",
     moq: "80 Cases",
     viscosity: "5W-30",
@@ -164,6 +172,7 @@ export const products: Product[] = [
     price: "Request Quote",
     image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
+    subcategory: "Engine Oils",
     packaging: "6 x 1 Quart Bottles",
     moq: "120 Cases",
     viscosity: "5W-30",
@@ -185,6 +194,7 @@ export const products: Product[] = [
     price: "Request Quote",
     image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
+    subcategory: "Automotive Fluids",
     packaging: "1 Gallon Bottle",
     moq: "100 Cases",
     sku: "AO-COOL-1GAL",
@@ -203,6 +213,7 @@ export const products: Product[] = [
     price: "Request Quote",
     image: "/placeholder.jpg",
     category: "Auto Parts",
+    subcategory: "Filters",
     moq: "100 Units",
     sku: "AO-AF-001",
     specs: ["Replacement Part", "Maintenance Item", "Wholesale Supply"],
@@ -218,6 +229,7 @@ export const products: Product[] = [
     price: "Request Quote",
     image: "/placeholder.jpg",
     category: "Auto Parts",
+    subcategory: "Exterior Accessories",
     moq: "100 Pairs",
     sku: "AO-WB-001",
     specs: ["All-Season Use", "Replacement Part", "Retail Ready"],
@@ -233,6 +245,7 @@ export const products: Product[] = [
     price: "Request Quote",
     image: "/placeholder.jpg",
     category: "General Merchandise",
+    subcategory: "Household Products",
     moq: "By Case",
     sku: "AO-GM-HE-001",
     specs: ["General Merchandise", "Retail Ready", "Bulk Supply"],
