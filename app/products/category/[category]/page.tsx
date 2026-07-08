@@ -16,6 +16,21 @@ function createSlug(value: string) {
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
 }
+function getCategoryImage(category: string) {
+  switch (category) {
+    case "Motor Oil & Transmission Fluids":
+      return "/images/products/motor-oil.png";
+
+    case "Auto Parts":
+      return "/images/products/auto-parts.png";
+
+    case "General Merchandise":
+      return "/images/products/general-merchandise.png";
+
+    default:
+      return "/placeholder.jpg";
+  }
+}
 
 export default async function CategoryPage({ params }: CategoryPageProps) {
   const { category } = await params;
@@ -54,12 +69,12 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             <div key={product.id} className="group">
               <div className="aspect-square overflow-hidden bg-gray-100">
                 <Image
-                  src={product.image}
-                  alt={product.name}
-                  width={600}
-                  height={600}
-                  className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
-                />
+  src={product.image || getCategoryImage(product.category)}
+  alt={product.name}
+  width={600}
+  height={600}
+  className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+/>
               </div>
 
               <div className="mt-4">

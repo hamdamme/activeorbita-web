@@ -10,7 +10,7 @@ export type Product = {
   shortDescription: string;
   description: string;
   price: string;
-  image: string;
+  image?: string;
   category: ProductCategory;
   subcategory: string;
   featured?: boolean;
@@ -36,7 +36,6 @@ export const products: Product[] = [
     description:
       "Full synthetic 0W-20 motor oil designed for fuel economy, cold-start protection, and modern gasoline engines.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Engine Oils",
     featured: true,
@@ -59,7 +58,6 @@ export const products: Product[] = [
     description:
       "Full synthetic 5W-20 motor oil formulated for engine cleanliness, wear protection, and dependable performance.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Engine Oils",
     packaging: "1 Quart Bottles / 5 Quart Bottles",
@@ -81,7 +79,6 @@ export const products: Product[] = [
     description:
       "Premium 5W-30 full synthetic motor oil for strong engine protection, high-temperature stability, and everyday use.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Engine Oils",
     featured: true,
@@ -104,7 +101,6 @@ export const products: Product[] = [
     description:
       "5W-40 full synthetic motor oil suitable for demanding driving conditions and high-temperature engine protection.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Engine Oils",
     packaging: "1 Quart Bottles / 5 Quart Bottles",
@@ -126,7 +122,6 @@ export const products: Product[] = [
     description:
       "10W-30 full synthetic motor oil formulated for reliable lubrication, wear protection, and engine performance.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Engine Oils",
     packaging: "1 Quart Bottles / 5 Quart Bottles",
@@ -148,7 +143,6 @@ export const products: Product[] = [
     description:
       "Full synthetic 10W-40 engine oil designed for strong film strength and dependable engine protection.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Engine Oils",
     packaging: "1 Quart Bottles / 5 Quart Bottles",
@@ -170,7 +164,6 @@ export const products: Product[] = [
     description:
       "High mileage 5W-30 motor oil formulated to help protect older engines and reduce wear over time.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Engine Oils",
     packaging: "1 Quart Bottles / 5 Quart Bottles",
@@ -192,7 +185,6 @@ export const products: Product[] = [
     description:
       "10W-40 high mileage motor oil designed for vehicles requiring stronger viscosity protection and engine care.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Engine Oils",
     packaging: "1 Quart Bottles / 5 Quart Bottles",
@@ -214,7 +206,6 @@ export const products: Product[] = [
     description:
       "Synthetic blend 5W-30 motor oil offering dependable engine protection for service centers and retail supply.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Engine Oils",
     packaging: "1 Quart Bottles / 5 Quart Bottles",
@@ -236,7 +227,6 @@ export const products: Product[] = [
     description:
       "10W-30 synthetic blend motor oil for repair shops, distributors, and wholesale automotive programs.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Engine Oils",
     packaging: "1 Quart Bottles / 5 Quart Bottles",
@@ -258,7 +248,6 @@ export const products: Product[] = [
     description:
       "Conventional 5W-30 motor oil for routine oil changes, retail supply, and service operations.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Engine Oils",
     packaging: "1 Quart Bottles / 5 Quart Bottles",
@@ -280,7 +269,6 @@ export const products: Product[] = [
     description:
       "10W-30 conventional motor oil for everyday vehicle maintenance and wholesale automotive distribution.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Engine Oils",
     packaging: "1 Quart Bottles / 5 Quart Bottles",
@@ -302,7 +290,6 @@ export const products: Product[] = [
     description:
       "15W-40 heavy duty diesel oil formulated for commercial engines, fleet maintenance, and demanding service conditions.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Engine Oils",
     packaging: "1 Gallon Bottles / Pails / Drums",
@@ -324,7 +311,6 @@ export const products: Product[] = [
     description:
       "10W-30 heavy duty diesel engine oil designed for fleet operators, service centers, and commercial vehicles.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Engine Oils",
     packaging: "1 Gallon Bottles / Pails / Drums",
@@ -346,7 +332,6 @@ export const products: Product[] = [
     description:
       "European formula 5W-40 motor oil designed for demanding engines requiring high-temperature protection.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Engine Oils",
     packaging: "1 Quart Bottles / 5 Quart Bottles",
@@ -370,7 +355,6 @@ export const products: Product[] = [
     description:
       "Dexron VI automatic transmission fluid designed for smooth shifting, oxidation resistance, and transmission protection.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Transmission Fluids",
     packaging: "1 Quart Bottles",
@@ -389,7 +373,6 @@ export const products: Product[] = [
     description:
       "Multi-vehicle ATF suitable for a wide range of automatic transmission service applications.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Transmission Fluids",
     packaging: "1 Quart Bottles",
@@ -408,7 +391,6 @@ export const products: Product[] = [
     description:
       "Mercon LV automatic transmission fluid for vehicles requiring low-viscosity ATF performance.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Transmission Fluids",
     packaging: "1 Quart Bottles",
@@ -427,7 +409,6 @@ export const products: Product[] = [
     description:
       "CVT fluid formulated for continuously variable transmissions requiring stable friction performance.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Transmission Fluids",
     packaging: "1 Quart Bottles",
@@ -446,7 +427,6 @@ export const products: Product[] = [
     description:
       "Dual clutch transmission fluid designed for smooth gear engagement and reliable DCT performance.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Transmission Fluids",
     packaging: "1 Quart Bottles",
@@ -465,7 +445,6 @@ export const products: Product[] = [
     description:
       "Manual transmission fluid formulated for gear protection, shift quality, and drivetrain maintenance.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Transmission Fluids",
     packaging: "1 Quart Bottles",
@@ -486,7 +465,6 @@ export const products: Product[] = [
     description:
       "75W-90 gear oil designed for differentials, gearboxes, and drivetrain components requiring strong wear protection.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Gear Oils",
     packaging: "1 Quart Bottles / Pails",
@@ -506,7 +484,6 @@ export const products: Product[] = [
     description:
       "80W-90 gear oil suitable for axles, differentials, and gear assemblies in demanding conditions.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Gear Oils",
     packaging: "1 Quart Bottles / Pails",
@@ -526,7 +503,6 @@ export const products: Product[] = [
     description:
       "75W-140 gear oil for high-load differentials and drivetrain systems requiring enhanced protection.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Gear Oils",
     packaging: "1 Quart Bottles / Pails",
@@ -546,7 +522,6 @@ export const products: Product[] = [
     description:
       "85W-140 gear oil designed for heavy-duty applications, high temperatures, and strong gear protection.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Gear Oils",
     packaging: "1 Quart Bottles / Pails",
@@ -568,7 +543,6 @@ export const products: Product[] = [
     description:
       "ISO 32 hydraulic oil for equipment, machinery, and hydraulic systems requiring reliable lubrication.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Hydraulic Oils",
     packaging: "1 Gallon / 5 Gallon / 55 Gallon Drum",
@@ -587,7 +561,6 @@ export const products: Product[] = [
     description:
       "ISO 46 hydraulic oil formulated for hydraulic pumps, equipment, and machinery protection.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Hydraulic Oils",
     packaging: "1 Gallon / 5 Gallon / 55 Gallon Drum",
@@ -606,7 +579,6 @@ export const products: Product[] = [
     description:
       "ISO 68 hydraulic oil for systems requiring higher viscosity, anti-wear protection, and reliable performance.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Hydraulic Oils",
     packaging: "1 Gallon / 5 Gallon / 55 Gallon Drum",
@@ -627,7 +599,6 @@ export const products: Product[] = [
     description:
       "Power steering fluid formulated for smooth steering performance and system protection.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Automotive Fluids",
     packaging: "12 oz / 1 Quart Bottles",
@@ -646,7 +617,6 @@ export const products: Product[] = [
     description:
       "DOT 3 brake fluid designed for reliable hydraulic brake system performance and service applications.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Automotive Fluids",
     packaging: "12 oz / 32 oz Bottles",
@@ -665,7 +635,6 @@ export const products: Product[] = [
     description:
       "DOT 4 brake fluid with higher boiling point performance for hydraulic brake applications.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Automotive Fluids",
     packaging: "12 oz / 32 oz Bottles",
@@ -684,7 +653,6 @@ export const products: Product[] = [
     description:
       "DOT 5.1 brake fluid formulated for advanced braking systems requiring high boiling point performance.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Automotive Fluids",
     packaging: "12 oz / 32 oz Bottles",
@@ -703,7 +671,6 @@ export const products: Product[] = [
     description:
       "Green engine coolant and antifreeze for cooling system protection, heat transfer, and freeze protection.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Automotive Fluids",
     packaging: "1 Gallon Bottles",
@@ -722,7 +689,6 @@ export const products: Product[] = [
     description:
       "Red engine coolant and antifreeze formulated for reliable cooling system protection and long service life.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Automotive Fluids",
     packaging: "1 Gallon Bottles",
@@ -741,7 +707,6 @@ export const products: Product[] = [
     description:
       "Windshield washer fluid available for convenience stores, auto parts retailers, and wholesale buyers.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Automotive Fluids",
     packaging: "1 Gallon Bottles",
@@ -760,7 +725,6 @@ export const products: Product[] = [
     description:
       "Diesel exhaust fluid for SCR-equipped diesel vehicles, fleets, and commercial transportation operations.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Automotive Fluids",
     packaging: "2.5 Gallon Jugs / Drums",
@@ -781,7 +745,6 @@ export const products: Product[] = [
     description:
       "Multi-purpose lithium grease suitable for bearings, chassis lubrication, and general automotive maintenance.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Greases",
     packaging: "14 oz Cartridges",
@@ -800,7 +763,6 @@ export const products: Product[] = [
     description:
       "Wheel bearing grease formulated for high-temperature protection and automotive bearing applications.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Greases",
     packaging: "14 oz Cartridges / Tubs",
@@ -819,7 +781,6 @@ export const products: Product[] = [
     description:
       "EP2 lithium grease for automotive, industrial, and heavy-duty lubrication applications.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Motor Oil & Transmission Fluids",
     subcategory: "Greases",
     packaging: "14 oz Cartridges / Pails",
@@ -841,7 +802,6 @@ export const products: Product[] = [
     description:
       "Standard oil filters available for repair shops, auto parts retailers, and wholesale maintenance programs.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Filters",
     moq: "100 Units",
@@ -857,7 +817,6 @@ export const products: Product[] = [
     description:
       "Engine air filters supplied for repair shops, auto parts retailers, and wholesale maintenance programs.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Filters",
     moq: "100 Units",
@@ -873,7 +832,6 @@ export const products: Product[] = [
     description:
       "Cabin air filters for passenger vehicles, retail auto parts sellers, and service centers.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Filters",
     moq: "100 Units",
@@ -889,7 +847,6 @@ export const products: Product[] = [
     description:
       "Fuel filters available for automotive service centers, distributors, and wholesale buyers.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Filters",
     moq: "100 Units",
@@ -905,7 +862,6 @@ export const products: Product[] = [
     description:
       "Transmission filter kits for repair shops, transmission service centers, and wholesale auto parts supply.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Filters",
     moq: "50 Kits",
@@ -922,7 +878,6 @@ export const products: Product[] = [
     description:
       "Reliable brake pads for repair shops, distributors, and retail auto parts sellers.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Brake System",
     moq: "50 Sets",
@@ -938,7 +893,6 @@ export const products: Product[] = [
     description:
       "Brake rotors supplied for automotive repair shops, service centers, and wholesale buyers.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Brake System",
     moq: "50 Pieces",
@@ -954,7 +908,6 @@ export const products: Product[] = [
     description:
       "Brake drums for passenger vehicles, light trucks, repair shops, and auto parts distributors.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Brake System",
     moq: "50 Pieces",
@@ -970,7 +923,6 @@ export const products: Product[] = [
     description:
       "Brake shoes available for repair shops, parts sellers, and wholesale automotive distributors.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Brake System",
     moq: "50 Sets",
@@ -986,7 +938,6 @@ export const products: Product[] = [
     description:
       "Brake calipers supplied for automotive repair, parts distribution, and replacement service programs.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Brake System",
     moq: "25 Pieces",
@@ -1002,7 +953,6 @@ export const products: Product[] = [
     description:
       "Brake master cylinders for repair shops, auto parts sellers, and wholesale brake system supply.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Brake System",
     moq: "25 Pieces",
@@ -1018,7 +968,6 @@ export const products: Product[] = [
     description:
       "Brake boosters available for service centers, parts retailers, and automotive distributors.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Brake System",
     moq: "25 Pieces",
@@ -1035,7 +984,6 @@ export const products: Product[] = [
     description:
       "Shock absorbers for suspension repair, auto parts retailers, and wholesale automotive supply.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Suspension & Steering",
     moq: "50 Pieces",
@@ -1051,7 +999,6 @@ export const products: Product[] = [
     description:
       "Replacement struts for automotive repair shops, distributors, and suspension service programs.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Suspension & Steering",
     moq: "50 Pieces",
@@ -1067,7 +1014,6 @@ export const products: Product[] = [
     description:
       "Ball joints supplied for repair shops, parts stores, and wholesale suspension component buyers.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Suspension & Steering",
     moq: "100 Pieces",
@@ -1083,7 +1029,6 @@ export const products: Product[] = [
     description:
       "Tie rod ends available for steering repair, auto parts distribution, and service centers.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Suspension & Steering",
     moq: "100 Pieces",
@@ -1099,7 +1044,6 @@ export const products: Product[] = [
     description:
       "Control arms for vehicle suspension repairs, distributors, and automotive service programs.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Suspension & Steering",
     moq: "50 Pieces",
@@ -1115,7 +1059,6 @@ export const products: Product[] = [
     description:
       "Wheel bearings supplied for repair shops, auto parts retailers, and wholesale parts programs.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Suspension & Steering",
     moq: "50 Pieces",
@@ -1131,7 +1074,6 @@ export const products: Product[] = [
     description:
       "Sway bar links available for suspension repair, parts sellers, and automotive distributors.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Suspension & Steering",
     moq: "100 Pieces",
@@ -1148,7 +1090,6 @@ export const products: Product[] = [
     description:
       "Spark plugs for gasoline engines, repair shops, auto parts retailers, and wholesale buyers.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Engine Components",
     moq: "200 Pieces",
@@ -1164,7 +1105,6 @@ export const products: Product[] = [
     description:
       "Ignition coils supplied for repair shops, parts stores, and wholesale engine component programs.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Engine Components",
     moq: "100 Pieces",
@@ -1180,7 +1120,6 @@ export const products: Product[] = [
     description:
       "Timing belt kits for repair shops, service centers, and wholesale engine maintenance supply.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Engine Components",
     moq: "50 Kits",
@@ -1196,7 +1135,6 @@ export const products: Product[] = [
     description:
       "Serpentine belts supplied for maintenance programs, repair shops, and parts distributors.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Engine Components",
     moq: "100 Pieces",
@@ -1212,7 +1150,6 @@ export const products: Product[] = [
     description:
       "Water pumps for engine cooling repair, service centers, and wholesale auto parts distribution.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Engine Components",
     moq: "50 Pieces",
@@ -1228,7 +1165,6 @@ export const products: Product[] = [
     description:
       "Thermostats available for engine cooling service, repair shops, and automotive wholesalers.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Engine Components",
     moq: "100 Pieces",
@@ -1244,7 +1180,6 @@ export const products: Product[] = [
     description:
       "Valve cover gaskets supplied for engine repair, parts stores, and wholesale service programs.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Engine Components",
     moq: "100 Pieces",
@@ -1261,7 +1196,6 @@ export const products: Product[] = [
     description:
       "Automotive batteries available for parts retailers, repair shops, and wholesale distribution.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Electrical",
     moq: "By Pallet",
@@ -1277,7 +1211,6 @@ export const products: Product[] = [
     description:
       "Alternators for vehicle electrical repair, service centers, and wholesale auto parts sellers.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Electrical",
     moq: "25 Pieces",
@@ -1293,7 +1226,6 @@ export const products: Product[] = [
     description:
       "Starter motors available for repair shops, distributors, and auto parts supply programs.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Electrical",
     moq: "25 Pieces",
@@ -1309,7 +1241,6 @@ export const products: Product[] = [
     description:
       "Headlight bulbs for retail shelves, auto parts stores, and wholesale electrical supply.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Electrical",
     moq: "200 Pieces",
@@ -1325,7 +1256,6 @@ export const products: Product[] = [
     description:
       "Tail light bulbs supplied for parts sellers, repair shops, and wholesale vehicle lighting programs.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Electrical",
     moq: "200 Pieces",
@@ -1341,7 +1271,6 @@ export const products: Product[] = [
     description:
       "Automotive fuses available for repair shops, parts retailers, and wholesale electrical supply.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Electrical",
     moq: "200 Packs",
@@ -1358,7 +1287,6 @@ export const products: Product[] = [
     description:
       "Radiators available for repair shops, parts distributors, and vehicle cooling system replacement.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Cooling System",
     moq: "25 Pieces",
@@ -1374,7 +1302,6 @@ export const products: Product[] = [
     description:
       "Cooling fan assemblies for auto repair, parts sellers, and wholesale cooling system supply.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Cooling System",
     moq: "25 Pieces",
@@ -1390,7 +1317,6 @@ export const products: Product[] = [
     description:
       "Radiator hoses supplied for repair shops, service centers, and automotive distributors.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Cooling System",
     moq: "100 Pieces",
@@ -1406,7 +1332,6 @@ export const products: Product[] = [
     description:
       "Heater hoses available for auto parts suppliers, repair shops, and cooling system programs.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Cooling System",
     moq: "100 Pieces",
@@ -1422,7 +1347,6 @@ export const products: Product[] = [
     description:
       "Coolant reservoirs for repair shops, distributors, and vehicle cooling system maintenance.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Cooling System",
     moq: "50 Pieces",
@@ -1439,7 +1363,6 @@ export const products: Product[] = [
     description:
       "Durable wiper blades available for auto parts sellers, service centers, and retail distribution.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Exterior Accessories",
     moq: "100 Pairs",
@@ -1455,7 +1378,6 @@ export const products: Product[] = [
     description:
       "Side mirrors available for body shops, parts retailers, and wholesale automotive exterior supply.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Exterior Accessories",
     moq: "50 Pieces",
@@ -1471,7 +1393,6 @@ export const products: Product[] = [
     description:
       "Mud flaps supplied for trucks, passenger vehicles, retail stores, and automotive distributors.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Exterior Accessories",
     moq: "100 Sets",
@@ -1487,7 +1408,6 @@ export const products: Product[] = [
     description:
       "Floor mats available for retail stores, auto accessory sellers, and wholesale vehicle supply.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "Auto Parts",
     subcategory: "Exterior Accessories",
     moq: "100 Sets",
@@ -1506,7 +1426,6 @@ export const products: Product[] = [
     description:
       "Everyday shampoo products available for retailers, distributors, convenience stores, and general merchandise buyers.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "General Merchandise",
     subcategory: "Personal Care",
     moq: "By Case",
@@ -1522,7 +1441,6 @@ export const products: Product[] = [
     description:
       "Conditioner products available for wholesale supply, retail stores, and general merchandise programs.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "General Merchandise",
     subcategory: "Personal Care",
     moq: "By Case",
@@ -1538,7 +1456,6 @@ export const products: Product[] = [
     description:
       "Body wash products for wholesale buyers, retail shelves, and everyday personal care supply.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "General Merchandise",
     subcategory: "Personal Care",
     moq: "By Case",
@@ -1554,7 +1471,6 @@ export const products: Product[] = [
     description:
       "Hand soap products available for general merchandise buyers, offices, stores, and distributors.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "General Merchandise",
     subcategory: "Personal Care",
     moq: "By Case",
@@ -1570,7 +1486,6 @@ export const products: Product[] = [
     description:
       "Toothpaste products available for retailers, distributors, dollar stores, and general merchandise programs.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "General Merchandise",
     subcategory: "Personal Care",
     moq: "By Case",
@@ -1586,7 +1501,6 @@ export const products: Product[] = [
     description:
       "Toothbrushes supplied for retail stores, travel kits, personal care sections, and wholesale buyers.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "General Merchandise",
     subcategory: "Personal Care",
     moq: "By Case",
@@ -1602,7 +1516,6 @@ export const products: Product[] = [
     description:
       "Deodorant products for convenience stores, retailers, distributors, and everyday personal care buyers.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "General Merchandise",
     subcategory: "Personal Care",
     moq: "By Case",
@@ -1618,7 +1531,6 @@ export const products: Product[] = [
     description:
       "Wet wipes available for retail stores, cleaning sections, personal care aisles, and wholesale programs.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "General Merchandise",
     subcategory: "Personal Care",
     moq: "By Case",
@@ -1634,7 +1546,6 @@ export const products: Product[] = [
     description:
       "Paper towels available for general merchandise buyers, retailers, offices, and janitorial supply programs.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "General Merchandise",
     subcategory: "Household Products",
     moq: "By Case",
@@ -1650,7 +1561,6 @@ export const products: Product[] = [
     description:
       "Facial tissue products for retail stores, offices, household aisles, and wholesale buyers.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "General Merchandise",
     subcategory: "Household Products",
     moq: "By Case",
@@ -1666,7 +1576,6 @@ export const products: Product[] = [
     description:
       "Toilet paper products available for retailers, offices, distributors, and household supply programs.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "General Merchandise",
     subcategory: "Household Products",
     moq: "By Case",
@@ -1682,7 +1591,6 @@ export const products: Product[] = [
     description:
       "Trash bags available in retail and bulk configurations for stores, offices, and general merchandise buyers.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "General Merchandise",
     subcategory: "Household Products",
     moq: "By Case",
@@ -1698,7 +1606,6 @@ export const products: Product[] = [
     description:
       "Aluminum foil products for grocery, convenience, discount retail, and wholesale general merchandise programs.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "General Merchandise",
     subcategory: "Household Products",
     moq: "By Case",
@@ -1714,7 +1621,6 @@ export const products: Product[] = [
     description:
       "Plastic wrap products for retail stores, household aisles, food service, and wholesale supply.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "General Merchandise",
     subcategory: "Household Products",
     moq: "By Case",
@@ -1730,7 +1636,6 @@ export const products: Product[] = [
     description:
       "Dish soap products available for household cleaning aisles, retailers, distributors, and wholesale buyers.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "General Merchandise",
     subcategory: "Cleaning Supplies",
     moq: "By Case",
@@ -1746,7 +1651,6 @@ export const products: Product[] = [
     description:
       "Laundry detergent products available for stores, distributors, household aisles, and general merchandise programs.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "General Merchandise",
     subcategory: "Cleaning Supplies",
     moq: "By Case",
@@ -1762,7 +1666,6 @@ export const products: Product[] = [
     description:
       "All-purpose cleaner for home, office, retail, and janitorial cleaning supply programs.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "General Merchandise",
     subcategory: "Cleaning Supplies",
     moq: "By Case",
@@ -1778,7 +1681,6 @@ export const products: Product[] = [
     description:
       "Disinfecting wipes for household, office, retail, and general cleaning supply needs.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "General Merchandise",
     subcategory: "Cleaning Supplies",
     moq: "By Case",
@@ -1794,7 +1696,6 @@ export const products: Product[] = [
     description:
       "Glass cleaner products for retail shelves, cleaning supply programs, offices, and household buyers.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "General Merchandise",
     subcategory: "Cleaning Supplies",
     moq: "By Case",
@@ -1810,7 +1711,6 @@ export const products: Product[] = [
     description:
       "Cleaning sponges available for kitchen cleaning, household aisles, discount retail, and wholesale buyers.",
     price: "Request Quote",
-    image: "/placeholder.jpg",
     category: "General Merchandise",
     subcategory: "Cleaning Supplies",
     moq: "By Case",
