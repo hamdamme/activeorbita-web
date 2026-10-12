@@ -4,13 +4,14 @@ import { products } from "@/app/data/products";
 import Image from "next/image";
 
 type ProductPageProps = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
-export default function ProductDetailPage({ params }: ProductPageProps) {
-  const product = products.find((item) => item.slug === params.slug);
+export default async function ProductDetailPage({ params }: ProductPageProps) {
+  const { slug } = await params;
+  const product = products.find((item) => item.slug === slug);
 
   if (!product) {
     notFound();
@@ -135,19 +136,20 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
 </div>
             
 
-          <div className="mt-8 flex gap-4">
+          <div className="mt-8 flex flex-wrap gap-4">
   <Link
-    href="/contact"
+    href={`/contact?product=${encodeURIComponent(product.slug)}`}
     className="inline-flex rounded-none border border-gray-900 px-6 py-3 text-sm font-medium text-gray-900 transition hover:bg-gray-900 hover:text-white"
   >
     Request a Quote
   </Link>
 
   <a
-    href={`https://wa.me/7738825595?text=${encodeURIComponent(
+    href={`https://wa.me/17738828507?text=${encodeURIComponent(
       product.whatsappMessage || `Hello, I am interested in ${product.name}.`
     )}`}
     target="_blank"
+    rel="noopener noreferrer"
     className="inline-flex rounded-none border border-green-600 px-6 py-3 text-sm font-medium text-green-600 transition hover:bg-green-600 hover:text-white"
   >
     WhatsApp

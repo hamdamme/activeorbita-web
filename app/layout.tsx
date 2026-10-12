@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import Link from "next/link";
+import SiteHeader from "./site-header";
 
 export const metadata: Metadata = {
   title: "Active Orbit INC",
@@ -17,38 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-white text-gray-900 antialiased">
         <div className="min-h-screen">
-          <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur">
-            <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
-              <Link href="/" className="text-lg font-semibold tracking-wide">
-                Active Orbit INC
-              </Link>
-
-              <nav className="hidden items-center gap-8 text-sm font-medium text-gray-700 md:flex">
-                <Link href="/" className="transition hover:text-black">
-                  Home
-                </Link>
-                <Link href="/about" className="transition hover:text-black">
-                  About
-                </Link>
-                <Link href="/services" className="transition hover:text-black">
-                  Services
-                </Link>
-                <Link href="/products" className="transition hover:text-black">
-                  Products
-                </Link>
-                <Link href="/contact" className="transition hover:text-black">
-                  Contact
-                </Link>
-              </nav>
-
-              <Link
-                href="/contact"
-                className="rounded-full border border-gray-900 px-4 py-2 text-sm font-medium transition hover:bg-gray-900 hover:text-white"
-              >
-                Request a Quote
-              </Link>
-            </div>
-          </header>
+          <SiteHeader />
 
           {children}
 
@@ -59,6 +28,12 @@ export default function RootLayout({
                 <p className="mt-2 text-sm text-gray-600">
                   Wholesale automotive products for commercial supply and distribution.
                 </p>
+                <a
+                  href="tel:+17738828507"
+                  className="mt-3 inline-block rounded text-sm font-medium text-gray-700 underline-offset-4 transition hover:text-black hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gray-900"
+                >
+                  773-882-8507
+                </a>
               </div>
 
               <div className="text-sm text-gray-500">
