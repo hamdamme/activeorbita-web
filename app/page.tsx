@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ProductImage from "./products/product-image";
 import { products } from "@/app/data/products";
 
 const services = [
@@ -222,13 +223,9 @@ export default function Home() {
     <div className="grid gap-8 md:grid-cols-3">
       {products.filter((product) => product.featured).slice(0, 3).map((product) => (
         <div key={product.id}>
-          <div className="aspect-square overflow-hidden bg-gray-100">
-            <img
-              src={product.image}
-              alt={product.name}
-              className="h-full w-full object-cover"
-            />
-          </div>
+          <Link href={`/products/${product.slug}`} aria-label={`View ${product.name}`}>
+            <ProductImage product={product} />
+          </Link>
 
           <div className="mt-4">
             <p className="text-xs uppercase tracking-wide text-gray-500">

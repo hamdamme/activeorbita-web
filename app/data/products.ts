@@ -1,3 +1,5 @@
+import brandedProducts from "./branded-products.json";
+
 export type ProductCategory =
   | "Motor Oil & Transmission Fluids"
   | "Auto Parts"
@@ -11,6 +13,12 @@ export type Product = {
   description: string;
   price: string;
   image?: string;
+  imageCaption?: string;
+  brand?: string;
+  selectionCode?: string;
+  sourceUrl?: string;
+  format?: string;
+  packages?: { id: string; label: string; manufacturerPartNumber?: string }[];
   category: ProductCategory;
   subcategory: string;
   featured?: boolean;
@@ -27,6 +35,7 @@ export type Product = {
 };
 
 export const products: Product[] = [
+  ...(brandedProducts as Product[]),
   // ENGINE OILS
   {
     id: "1",

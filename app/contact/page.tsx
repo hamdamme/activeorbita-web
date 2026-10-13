@@ -1,18 +1,18 @@
 import { products } from "@/app/data/products";
 import ContactForm from "./contact-form";
+import { getInquiryMessage, getProductPackage } from "@/lib/product-inquiry";
 
 export default async function ContactPage({
   searchParams,
 }: {
-  searchParams: Promise<{ product?: string | string[] }>;
+  searchParams: Promise<{ product?: string | string[]; package?: string | string[] }>;
 }) {
-  const { product: slug } = await searchParams;
+  const { product: slug, package: packageId } = await searchParams;
   const product = typeof slug === "string"
     ? products.find((item) => item.slug === slug)
     : undefined;
-  const initialMessage = product
-    ? `Hello, I would like a quote for ${product.name}${product.sku ? ` (SKU: ${product.sku})` : ""}.`
-    : "";
+  const selected = product ? getProductPackage(product, packageId) : undefined;
+  const initialMessage = product ? getInquiryMessage(product, packageId) : "";
 
-  return <ContactForm key={product?.slug ?? "general"} initialMessage={initialMessage} />;
+  return <ContactForm key={`${product?.slug ?? "general"}:${selected?.id ?? ""}`} initialMessage={initialMessage} />;
 }

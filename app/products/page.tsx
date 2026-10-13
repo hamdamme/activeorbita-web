@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { products } from "@/app/data/products";
@@ -17,7 +15,7 @@ export default function ProductsPage() {
           </h1>
 
           <p className="mt-3 max-w-2xl text-base text-gray-600">
-            Choose a category to explore our wholesale product offerings.
+            Explore motor oils from Mobil, Everest, Castrol and Shell, alongside personal care from Old Spice, Degree, Crest and Oral-B.
           </p>
         </div>
 
@@ -46,7 +44,7 @@ export default function ProductsPage() {
                 ? "Premium engine oils, transmission fluids, lubricants, and automotive chemicals for commercial fleets, distributors, and wholesale buyers."
                 : category === "Auto Parts"
                 ? "Quality replacement parts and maintenance components for passenger vehicles, trucks, and commercial fleets."
-                : "Wholesale general merchandise including personal care products, household essentials, and everyday retail items.";
+                : "Old Spice and Degree antiperspirants, Crest toothpaste, Oral-B toothbrushes, household essentials, and everyday retail items.";
 
             return (
               <Link
