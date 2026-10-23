@@ -1,3 +1,4 @@
+import { pageMetadata } from "@/lib/seo";
 const services = [
   {
     title: "Wholesale Distribution",
@@ -30,6 +31,8 @@ const services = [
       "A flexible structure built to support growth in products, customers, and international operations.",
   },
 ];
+
+export const metadata = pageMetadata('Wholesale Distribution & Export Services', 'Explore wholesale distribution, global export coordination and product inquiry services from Active Orbit INC. Contact us to discuss your supply needs.', '/services');
 
 export default function ServicesPage() {
   return (

@@ -1,3 +1,6 @@
+import { pageMetadata } from "@/lib/seo";
+export const metadata = pageMetadata('About Our Wholesale Business', 'Learn about Active Orbit INC and our wholesale distribution, product sourcing and export coordination for business customers.', '/about');
+
 export default function AboutPage() {
   return (
     <main className="bg-white text-gray-900">

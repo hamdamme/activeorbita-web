@@ -1,24 +1,35 @@
+import { pageMetadata } from "@/lib/seo";
+import ProductCatalog from "./product-catalog";
 import Image from "next/image";
 import Link from "next/link";
 import { products } from "@/app/data/products";
 
 const categories = Array.from(new Set(products.map((p) => p.category)));
 
+export const metadata = pageMetadata('Wholesale Product Catalog', 'Explore motor oils, transmission fluids, auto parts and personal-care products. Browse by category and request a quote for your business.', '/products');
+
 export default function ProductsPage() {
   return (
-    <div className="bg-white">
+    <main className="bg-white">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
         {/* Header */}
         <div className="mb-12 border-b border-gray-200 pb-6">
           <h1 className="text-4xl font-bold text-gray-900">
-            Product Categories
+            Wholesale Product Catalog
           </h1>
 
           <p className="mt-3 max-w-2xl text-base text-gray-600">
             Explore motor oils from Mobil, Everest, Castrol and Shell, alongside personal care from Old Spice, Degree, Crest and Oral-B.
           </p>
+          <a href="#categories" className="mt-4 inline-block text-sm font-medium underline underline-offset-4">Browse by category ↓</a>
         </div>
 
+        <section aria-labelledby="catalog-heading" className="mb-16">
+          <h2 id="catalog-heading" className="mb-5 text-2xl font-semibold">Find a product</h2>
+          <ProductCatalog products={products} />
+        </section>
+
+        <h2 id="categories" className="mb-6 scroll-mt-28 text-2xl font-semibold">Browse by category</h2>
         {/* Categories */}
         <div className="grid gap-8 md:grid-cols-3">
           {categories.map((category) => {
@@ -60,7 +71,6 @@ export default function ProductsPage() {
                     width={600}
                     height={400}
                     className="h-72 w-full object-contain p-6 transition-transform duration-300 group-hover:scale-105"
-                    priority
                   />
                 </div>
 
@@ -94,6 +104,6 @@ export default function ProductsPage() {
           })}
         </div>
       </div>
-    </div>
+    </main>
   );
 }

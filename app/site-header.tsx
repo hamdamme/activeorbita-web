@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useRef, useState } from "react";
+import BasketLink from "./quote/basket-link";
 import { Menu, X } from "lucide-react";
 
 const links = [
@@ -27,9 +28,9 @@ function HeaderNavigation({ pathname }: { pathname: string }) {
       <Link
         key={href}
         href={href}
-        aria-current={pathname === href ? "page" : undefined}
+        aria-current={pathname === href ? "page" : href !== "/" && pathname.startsWith(`${href}/`) ? "location" : undefined}
         onClick={() => setOpen(false)}
-        className="rounded py-2 transition hover:text-black focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gray-900"
+        className="min-h-11 rounded px-2 py-3 transition aria-[current]:bg-gray-100 aria-[current]:text-black hover:text-black focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gray-900"
       >
         {label}
       </Link>
@@ -46,17 +47,18 @@ function HeaderNavigation({ pathname }: { pathname: string }) {
         }
       }}
     >
-      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-6 py-4 lg:px-10">
-        <Link href="/" onClick={() => setOpen(false)} className="text-lg font-semibold tracking-wide">
+      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-2 px-4 py-3 sm:px-6 lg:px-10">
+        <Link href="/" onClick={() => setOpen(false)} className="shrink-0 text-sm font-semibold tracking-wide sm:text-lg">
           Active Orbit INC
         </Link>
 
-        <nav aria-label="Main navigation" className="hidden items-center gap-8 text-sm font-medium text-gray-700 lg:flex">
+        <nav aria-label="Main navigation" className="hidden items-center gap-4 text-sm font-medium text-gray-700 lg:flex">
           {navigationLinks()}
         </nav>
 
-        <div className="flex items-center gap-3">
-          <Link href="/contact" onClick={() => setOpen(false)} className="hidden rounded-full border border-gray-900 px-4 py-2 text-sm font-medium transition hover:bg-gray-900 hover:text-white sm:inline-flex">
+        <div className="flex items-center gap-2">
+          <BasketLink />
+          <Link href="/contact" onClick={() => setOpen(false)} className="hidden rounded-full border border-gray-900 px-4 py-2 text-sm font-medium transition hover:bg-gray-900 hover:text-white xl:inline-flex">
             Request a Quote
           </Link>
           <button
@@ -72,12 +74,13 @@ function HeaderNavigation({ pathname }: { pathname: string }) {
           </button>
         </div>
 
-        <nav id="mobile-navigation" aria-label="Mobile navigation" hidden={!open} className="w-full border-t border-gray-200 pt-4 text-sm font-medium text-gray-700 lg:hidden">
+        <nav id="mobile-navigation" aria-label="Mobile navigation" hidden={!open} className="max-h-[calc(100dvh-5rem)] w-full overflow-y-auto border-t border-gray-200 pt-4 text-sm font-medium text-gray-700 lg:hidden">
           <div className="flex flex-col gap-2">
             {navigationLinks()}
-            <Link href="/contact" onClick={() => setOpen(false)} className="mt-2 self-start rounded-full bg-gray-900 px-5 py-3 text-white transition hover:bg-gray-700 sm:hidden">
+            <Link href="/contact" onClick={() => setOpen(false)} className="mt-2 self-start rounded-full bg-gray-900 px-5 py-3 text-white transition hover:bg-gray-700">
               Request a Quote
             </Link>
+            <a href="tel:+17738828507" className="min-h-11 self-start rounded px-2 py-3 underline underline-offset-4">Call 773-882-8507</a>
           </div>
         </nav>
       </div>

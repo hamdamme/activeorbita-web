@@ -1,12 +1,15 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import Link from "next/link";
+import { FormEvent, useRef, useState } from "react";
 
-export default function ContactForm({ initialMessage }: { initialMessage: string }) {
+export default function ContactForm({ initialMessage, basketInquiry = false }: { initialMessage: string; basketInquiry?: boolean }) {
+  const submitting = useRef(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     company: "",
+    website: "",
     message: initialMessage,
   });
 
@@ -20,6 +23,8 @@ export default function ContactForm({ initialMessage }: { initialMessage: string
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (submitting.current) return;
+    submitting.current = true;
 
     setStatus({
       type: "loading",
@@ -35,21 +40,22 @@ export default function ContactForm({ initialMessage }: { initialMessage: string
         body: JSON.stringify(formData),
       });
 
-      const result = await response.json();
+      const result = await response.json().catch(() => ({}));
 
       if (!response.ok) {
-        throw new Error(result.error || "Failed to send inquiry.");
+        throw new Error(result.error || "Unable to confirm receipt. Please try again or call 773-882-8507.");
       }
 
       setStatus({
         type: "success",
-        message: "Your inquiry was sent successfully.",
+        message: result.message || "Your inquiry was received successfully.",
       });
 
       setFormData({
         name: "",
         email: "",
         company: "",
+        website: "",
         message: "",
       });
     } catch (error) {
@@ -60,6 +66,8 @@ export default function ContactForm({ initialMessage }: { initialMessage: string
             ? error.message
             : "Something went wrong. Please try again.",
       });
+    } finally {
+      submitting.current = false;
     }
   }
 
@@ -137,7 +145,7 @@ export default function ContactForm({ initialMessage }: { initialMessage: string
                   Business Focus
                 </span>
                 <span className="mt-1 block text-base font-medium">
-                  Wholesale distribution and global export of automotive products
+                  Wholesale distribution and global export of motor oils, automotive products, and personal care essentials
                 </span>
               </div>
             </div>
@@ -146,7 +154,13 @@ export default function ContactForm({ initialMessage }: { initialMessage: string
           <div className="rounded-[2rem] border border-gray-200 bg-white p-8 shadow-sm">
             <h2 className="text-2xl font-semibold">Send an Inquiry</h2>
 
-            <form onSubmit={handleSubmit} className="mt-8 space-y-5">
+            {basketInquiry && <p className="mt-4 text-sm text-gray-600">Your product list is included below. Add delivery details or special requirements to the message. <Link href="/quote" className="underline">Edit quote list</Link></p>}
+
+            <form onSubmit={handleSubmit} aria-busy={status.type === "loading"} className="mt-8 space-y-5">
+              <div hidden aria-hidden="true">
+                <label htmlFor="website">Leave this field empty</label>
+                <input id="website" name="website" tabIndex={-1} autoComplete="off" value={formData.website} onChange={handleChange} />
+              </div>
               <div>
                 <label
                   htmlFor="name"
@@ -155,6 +169,8 @@ export default function ContactForm({ initialMessage }: { initialMessage: string
                   Full name
                 </label>
                 <input
+                  maxLength={120}
+                  autoComplete="name"
                   id="name"
                   name="name"
                   type="text"
@@ -174,6 +190,8 @@ export default function ContactForm({ initialMessage }: { initialMessage: string
                   Email address
                 </label>
                 <input
+                  maxLength={254}
+                  autoComplete="email"
                   id="email"
                   name="email"
                   type="email"
@@ -193,6 +211,8 @@ export default function ContactForm({ initialMessage }: { initialMessage: string
                   Company
                 </label>
                 <input
+                  maxLength={200}
+                  autoComplete="organization"
                   id="company"
                   name="company"
                   type="text"
@@ -211,9 +231,10 @@ export default function ContactForm({ initialMessage }: { initialMessage: string
                   Message
                 </label>
                 <textarea
+                  maxLength={20000}
                   id="message"
                   name="message"
-                  rows={6}
+                  rows={basketInquiry ? 14 : 6}
                   placeholder="Tell us about your request"
                   value={formData.message}
                   onChange={handleChange}
@@ -232,6 +253,7 @@ export default function ContactForm({ initialMessage }: { initialMessage: string
 
               {status.type !== "idle" && (
                 <p
+                  role={status.type === "error" ? "alert" : "status"}
                   className={`text-sm ${
                     status.type === "success"
                       ? "text-green-600"

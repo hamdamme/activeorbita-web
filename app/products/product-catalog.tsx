@@ -3,20 +3,22 @@
 import Link from "next/link";
 import { useState } from "react";
 import type { Product } from "@/app/data/products";
+import { matchesProductSearch } from "@/lib/product-search";
 import ProductImage from "./product-image";
 
 const pageSize = 24;
-const emptyFilters = { search: "", brand: "", subcategory: "", viscosity: "" };
+const emptyFilters = { search: "", brand: "", subcategory: "", viscosity: "", category: "" };
 
 export default function ProductCatalog({ products }: { products: Product[] }) {
   const [filters, setFilters] = useState(emptyFilters);
   const [limit, setLimit] = useState(pageSize);
+  const categories = [...new Set(products.map((p) => p.category))].sort();
   const brands = [...new Set(products.map((p) => p.brand || "Other products"))].sort();
   const subcategories = [...new Set(products.map((p) => p.subcategory))].sort();
   const viscosities = [...new Set(products.flatMap((p) => p.viscosity ? [p.viscosity] : []))].sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
   const filtered = products.filter((p) => {
-    const text = `${p.name} ${p.brand ?? ""} ${p.sku ?? ""} ${p.subcategory} ${p.packaging ?? ""}`.toLowerCase();
-    return filters.search.toLowerCase().trim().split(/\s+/).every((word) => text.includes(word))
+    return matchesProductSearch(p, filters.search)
+      && (!filters.category || p.category === filters.category)
       && (!filters.brand || (p.brand || "Other products") === filters.brand)
       && (!filters.subcategory || p.subcategory === filters.subcategory)
       && (!filters.viscosity || p.viscosity === filters.viscosity);
@@ -34,8 +36,15 @@ export default function ProductCatalog({ products }: { products: Product[] }) {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <label className="text-sm font-medium text-gray-700">
             Search products
-            <input type="search" placeholder="Name, brand or SKU" value={filters.search} onChange={(event) => update("search", event.target.value)} className={fieldClass} />
+            <input type="search" placeholder="Brand, SKU, grade, pail or drum" value={filters.search} onChange={(event) => update("search", event.target.value)} className={fieldClass} />
           </label>
+          {categories.length > 1 && <label className="text-sm font-medium text-gray-700">
+            Category
+            <select value={filters.category} onChange={(event) => update("category", event.target.value)} className={fieldClass}>
+              <option value="">All categories</option>
+              {categories.map((category) => <option key={category}>{category}</option>)}
+            </select>
+          </label>}
           <label className="text-sm font-medium text-gray-700">
             Brand
             <select value={filters.brand} onChange={(event) => update("brand", event.target.value)} className={fieldClass}>
@@ -68,6 +77,7 @@ export default function ProductCatalog({ products }: { products: Product[] }) {
         <div className="rounded-2xl border border-gray-200 px-6 py-16 text-center">
           <h2 className="text-xl font-semibold">No matching products</h2>
           <p className="mt-3 text-gray-600">Try another search or clear your filters.</p>
+          <Link href="/contact" className="mt-5 inline-block font-medium underline underline-offset-4">Ask us about a product you need</Link>
         </div>
       ) : (
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
@@ -78,7 +88,7 @@ export default function ProductCatalog({ products }: { products: Product[] }) {
                 <p className="text-xs font-medium uppercase tracking-wide text-gray-500">{product.brand || product.subcategory}</p>
                 <h2 className="mt-2 text-lg font-semibold text-gray-900"><Link href={`/products/${product.slug}`} className="hover:underline">{product.name}</Link></h2>
                 <p className="mt-2 text-sm leading-6 text-gray-600">{product.shortDescription}</p>
-                {product.packages && <p className="mt-2 text-xs text-gray-500">1 gallon · 5 gallon pail · 55 gallon drum</p>}
+                {product.packages && <p className="mt-2 text-xs text-gray-500">{product.packages.map((item) => item.label).join(" · ")}</p>}
                 <div className="mt-auto flex items-center justify-between gap-3 pt-5 text-sm">
                   <span className="font-medium">{product.price}</span>
                   <Link href={`/products/${product.slug}`} className="font-medium underline underline-offset-4">View Details</Link>

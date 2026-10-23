@@ -9,3 +9,13 @@ Mobil Delvac 1300 Super, Everest Advanced CK-4 and Shell Rotella T4 15W-40 offer
 Product-family photos and packaging differences are labeled as representative. Confirm exact supplier packaging before replacing these with inventory-specific photos. Toothbrushes use Oral-B branding; toothpaste uses Crest branding.
 
 To maintain a listing, update its data and source record, place the photo under `public/images/products/brands`, and run `npm run lint` and `npm run build`. Keep slugs stable to preserve existing links.
+
+## Product information review — 2026-10-21
+
+- Verified all 12 Castrol images against the manufacturer’s grade-specific bottle labels. New `-grade.webp` assets distinguish these images from previously cached versions. Each shows a 1 US quart bottle; this is a manufacturer reference, not confirmation of inventory or case quantities.
+- Added manufacturer-listed sizes for Old Spice High Endurance Pure Sport and Crest Cavity Protection. Crest retail multipacks are explicitly distinguished from wholesale cases.
+- Added `manufacturerSizes` and `imageNote` fields for verified reference information. Keep `imageCaption` for representative images; it triggers the catalog badge.
+- Diesel listings now explicitly identify the photographed package as a 1 US gallon jug, so pail and drum requests cannot be mistaken for the image shown.
+- Case quantities and minimum orders for branded products are explicitly marked as confirmed with a quote where supplier information is not available.
+- 44 listings retain representative-photo labels: Mobil 1 (32), Mobil Super (7), Everest high-mileage grades without an exact photo (2), and the three diesel listings with multiple package choices. Mobil’s direct image endpoint rejected this review’s download request. Retain existing representative photos until exact assets can be verified.
+- Source and verification records are maintained in `product-sources.json`. No stock, pricing, supplier case counts or minimum orders were inferred from manufacturer images.

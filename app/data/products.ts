@@ -14,6 +14,8 @@ export type Product = {
   price: string;
   image?: string;
   imageCaption?: string;
+  imageNote?: string;
+  manufacturerSizes?: string[];
   brand?: string;
   selectionCode?: string;
   sourceUrl?: string;

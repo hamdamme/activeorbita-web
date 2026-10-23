@@ -1075,8 +1075,11 @@
     "sourceUrl": "https://www.castrol.com/en_us/united-states/home/products/our-brands/automotive/castrol-edge-oils/castrol-edge.html",
     "viscosity": "0W-16",
     "oilType": "Full Synthetic",
-    "imageCaption": "Manufacturer product-line image; label and packaging may vary.",
-    "image": "/images/products/brands/castrol-edge-0w-16.webp"
+    "image": "/images/products/brands/castrol-edge-0w-16-grade.webp",
+    "imageNote": "Manufacturer photo shows this oil grade in a 1 US quart bottle. Confirm required packaging and case quantities with your quote.",
+    "manufacturerSizes": [
+      "1 US quart (946 mL) bottle"
+    ]
   },
   {
     "id": "brand-castrol-edge-0w-20",
@@ -1093,8 +1096,11 @@
     "sourceUrl": "https://www.castrol.com/en_us/united-states/home/products/our-brands/automotive/castrol-edge-oils/castrol-edge.html",
     "viscosity": "0W-20",
     "oilType": "Full Synthetic",
-    "imageCaption": "Manufacturer product-line image; label and packaging may vary.",
-    "image": "/images/products/brands/castrol-edge-0w-20.webp"
+    "image": "/images/products/brands/castrol-edge-0w-20-grade.webp",
+    "imageNote": "Manufacturer photo shows this oil grade in a 1 US quart bottle. Confirm required packaging and case quantities with your quote.",
+    "manufacturerSizes": [
+      "1 US quart (946 mL) bottle"
+    ]
   },
   {
     "id": "brand-castrol-edge-5w-20",
@@ -1111,8 +1117,11 @@
     "sourceUrl": "https://www.castrol.com/en_us/united-states/home/products/our-brands/automotive/castrol-edge-oils/castrol-edge.html",
     "viscosity": "5W-20",
     "oilType": "Full Synthetic",
-    "imageCaption": "Manufacturer product-line image; label and packaging may vary.",
-    "image": "/images/products/brands/castrol-edge-5w-20.webp"
+    "image": "/images/products/brands/castrol-edge-5w-20-grade.webp",
+    "imageNote": "Manufacturer photo shows this oil grade in a 1 US quart bottle. Confirm required packaging and case quantities with your quote.",
+    "manufacturerSizes": [
+      "1 US quart (946 mL) bottle"
+    ]
   },
   {
     "id": "brand-castrol-edge-5w-30",
@@ -1129,8 +1138,11 @@
     "sourceUrl": "https://www.castrol.com/en_us/united-states/home/products/our-brands/automotive/castrol-edge-oils/castrol-edge.html",
     "viscosity": "5W-30",
     "oilType": "Full Synthetic",
-    "imageCaption": "Manufacturer product-line image; label and packaging may vary.",
-    "image": "/images/products/brands/castrol-edge-5w-30.webp"
+    "image": "/images/products/brands/castrol-edge-5w-30-grade.webp",
+    "imageNote": "Manufacturer photo shows this oil grade in a 1 US quart bottle. Confirm required packaging and case quantities with your quote.",
+    "manufacturerSizes": [
+      "1 US quart (946 mL) bottle"
+    ]
   },
   {
     "id": "brand-castrol-edge-10w-30",
@@ -1147,8 +1159,11 @@
     "sourceUrl": "https://www.castrol.com/en_us/united-states/home/products/our-brands/automotive/castrol-edge-oils/castrol-edge.html",
     "viscosity": "10W-30",
     "oilType": "Full Synthetic",
-    "imageCaption": "Manufacturer product-line image; label and packaging may vary.",
-    "image": "/images/products/brands/castrol-edge-10w-30.webp"
+    "image": "/images/products/brands/castrol-edge-10w-30-grade.webp",
+    "imageNote": "Manufacturer photo shows this oil grade in a 1 US quart bottle. Confirm required packaging and case quantities with your quote.",
+    "manufacturerSizes": [
+      "1 US quart (946 mL) bottle"
+    ]
   },
   {
     "id": "brand-castrol-edge-extended-performance-5w-30",
@@ -1165,8 +1180,11 @@
     "sourceUrl": "https://www.castrol.com/en_us/united-states/home/products/our-brands/automotive/castrol-edge-oils/castrol-edge-extended-performance.html",
     "viscosity": "5W-30",
     "oilType": "Full Synthetic",
-    "imageCaption": "Manufacturer product-line image; label and packaging may vary.",
-    "image": "/images/products/brands/castrol-edge-extended-performance-5w-30.webp"
+    "image": "/images/products/brands/castrol-edge-extended-performance-5w-30-grade.webp",
+    "imageNote": "Manufacturer photo shows this oil grade in a 1 US quart bottle. Confirm required packaging and case quantities with your quote.",
+    "manufacturerSizes": [
+      "1 US quart (946 mL) bottle"
+    ]
   },
   {
     "id": "brand-castrol-edge-high-mileage-5w-30",
@@ -1183,8 +1201,11 @@
     "sourceUrl": "https://www.castrol.com/en_us/united-states/home/products/our-brands/automotive/castrol-edge-oils/castrol-edge-high-mileage.html",
     "viscosity": "5W-30",
     "oilType": "Full Synthetic",
-    "imageCaption": "Manufacturer product-line image; label and packaging may vary.",
-    "image": "/images/products/brands/castrol-edge-high-mileage-5w-30.webp"
+    "image": "/images/products/brands/castrol-edge-high-mileage-5w-30-grade.webp",
+    "imageNote": "Manufacturer photo shows this oil grade in a 1 US quart bottle. Confirm required packaging and case quantities with your quote.",
+    "manufacturerSizes": [
+      "1 US quart (946 mL) bottle"
+    ]
   },
   {
     "id": "brand-castrol-edge-euro-a3-b4-5w-30",
@@ -1201,8 +1222,11 @@
     "sourceUrl": "https://www.castrol.com/en_us/united-states/home/products/our-brands/automotive/castrol-edge-oils/castrol-edge-euro.html",
     "viscosity": "5W-30",
     "oilType": "Full Synthetic",
-    "imageCaption": "Manufacturer product-line image; label and packaging may vary.",
-    "image": "/images/products/brands/castrol-edge-euro-a3-b4-5w-30.webp"
+    "image": "/images/products/brands/castrol-edge-euro-a3-b4-5w-30-grade.webp",
+    "imageNote": "Manufacturer photo shows this oil grade in a 1 US quart bottle. Confirm required packaging and case quantities with your quote.",
+    "manufacturerSizes": [
+      "1 US quart (946 mL) bottle"
+    ]
   },
   {
     "id": "brand-castrol-gtx-full-synthetic-5w-30",
@@ -1219,8 +1243,11 @@
     "sourceUrl": "https://www.castrol.com/en_us/united-states/home/products/our-brands/automotive/castrol-gtx-oils/castrol-gtx-full-synthetic.html",
     "viscosity": "5W-30",
     "oilType": "Full Synthetic",
-    "imageCaption": "Manufacturer product-line image; label and packaging may vary.",
-    "image": "/images/products/brands/castrol-gtx-full-synthetic-5w-30.webp"
+    "image": "/images/products/brands/castrol-gtx-full-synthetic-5w-30-grade.webp",
+    "imageNote": "Manufacturer photo shows this oil grade in a 1 US quart bottle. Confirm required packaging and case quantities with your quote.",
+    "manufacturerSizes": [
+      "1 US quart (946 mL) bottle"
+    ]
   },
   {
     "id": "brand-castrol-gtx-high-mileage-5w-30",
@@ -1237,8 +1264,11 @@
     "sourceUrl": "https://www.castrol.com/en_us/united-states/home/products/our-brands/automotive/castrol-gtx-oils/castrol-gtx-high-mileage.html",
     "viscosity": "5W-30",
     "oilType": "Synthetic Blend",
-    "imageCaption": "Manufacturer product-line image; label and packaging may vary.",
-    "image": "/images/products/brands/castrol-gtx-high-mileage-5w-30.webp"
+    "image": "/images/products/brands/castrol-gtx-high-mileage-5w-30-grade.webp",
+    "imageNote": "Manufacturer photo shows this oil grade in a 1 US quart bottle. Confirm required packaging and case quantities with your quote.",
+    "manufacturerSizes": [
+      "1 US quart (946 mL) bottle"
+    ]
   },
   {
     "id": "brand-castrol-gtx-5w-20",
@@ -1255,8 +1285,11 @@
     "sourceUrl": "https://www.castrol.com/en_us/united-states/home/products/our-brands/automotive/castrol-gtx-oils/castrol-gtx.html",
     "viscosity": "5W-20",
     "oilType": "Conventional / Synthetic Blend",
-    "imageCaption": "Manufacturer product-line image; label and packaging may vary.",
-    "image": "/images/products/brands/castrol-gtx-5w-20.webp"
+    "image": "/images/products/brands/castrol-gtx-5w-20-grade.webp",
+    "imageNote": "Manufacturer photo shows this oil grade in a 1 US quart bottle. Confirm required packaging and case quantities with your quote.",
+    "manufacturerSizes": [
+      "1 US quart (946 mL) bottle"
+    ]
   },
   {
     "id": "brand-castrol-gtx-5w-30",
@@ -1273,8 +1306,11 @@
     "sourceUrl": "https://www.castrol.com/en_us/united-states/home/products/our-brands/automotive/castrol-gtx-oils/castrol-gtx.html",
     "viscosity": "5W-30",
     "oilType": "Conventional / Synthetic Blend",
-    "imageCaption": "Manufacturer product-line image; label and packaging may vary.",
-    "image": "/images/products/brands/castrol-gtx-5w-30.webp"
+    "image": "/images/products/brands/castrol-gtx-5w-30-grade.webp",
+    "imageNote": "Manufacturer photo shows this oil grade in a 1 US quart bottle. Confirm required packaging and case quantities with your quote.",
+    "manufacturerSizes": [
+      "1 US quart (946 mL) bottle"
+    ]
   },
   {
     "id": "brand-old-spice-high-endurance-pure-sport-antiperspirant",
@@ -1282,15 +1318,18 @@
     "slug": "old-spice-high-endurance-pure-sport-antiperspirant",
     "brand": "Old Spice",
     "selectionCode": "O1",
-    "shortDescription": "Solid antiperspirant for wholesale and retail supply.",
-    "description": "Old Spice High Endurance Pure Sport Antiperspirant combines antiperspirant and deodorant in a solid format. Contact us for current pack sizes, case quantities and wholesale pricing.",
+    "shortDescription": "Pure Sport scented solid antiperspirant and deodorant.",
+    "description": "Old Spice High Endurance Pure Sport is an invisible solid antiperspirant and deodorant. The manufacturer lists a 3.3 oz stick. Request available case quantities and wholesale pricing for your order.",
     "price": "Request Quote",
     "category": "General Merchandise",
     "subcategory": "Men’s Antiperspirants",
     "sku": "AO-O1",
     "sourceUrl": "https://oldspice.com/shop-at-retailers/old-spice-high-endurance-anti-perspirant-deodorant-for-men-pure-sport-scent-3-3-oz/",
     "format": "Solid",
-    "image": "/images/products/brands/old-spice-high-endurance-pure-sport-antiperspirant.webp"
+    "image": "/images/products/brands/old-spice-high-endurance-pure-sport-antiperspirant.webp",
+    "manufacturerSizes": [
+      "3.3 oz stick"
+    ]
   },
   {
     "id": "brand-old-spice-swagger-antiperspirant",
@@ -1778,15 +1817,23 @@
     "slug": "crest-cavity-protection-toothpaste",
     "brand": "Crest",
     "selectionCode": "T1",
-    "shortDescription": "Crest toothpaste for retail and wholesale orders.",
-    "description": "Crest Cavity Protection Toothpaste. Request available tube sizes, case quantities and wholesale pricing when ordering.",
+    "shortDescription": "Crest Cavity Protection toothpaste in a range of tube sizes.",
+    "description": "Crest Cavity Protection toothpaste is listed by the manufacturer in individual tubes and retail multipacks. Tell us your preferred tube size and whether you need individual units or wholesale cases. Retail multipacks are not wholesale case quantities.",
     "price": "Request Quote",
     "category": "General Merchandise",
     "subcategory": "Toothpaste",
     "sku": "AO-T1",
     "sourceUrl": "https://crest.com/en-us/oral-care-products/toothpaste/crest-cavity-protection-toothpaste-regular-paste",
     "format": "Toothpaste",
-    "image": "/images/products/brands/crest-cavity-protection-toothpaste.webp"
+    "image": "/images/products/brands/crest-cavity-protection-toothpaste.webp",
+    "manufacturerSizes": [
+      "0.85 oz tube",
+      "2.4 oz tube",
+      "4.2 oz tube",
+      "5.7 oz tube",
+      "8.2 oz tube",
+      "5.7 oz retail multipacks: 2, 3 or 4 tubes"
+    ]
   },
   {
     "id": "brand-crest-whitening-plus-scope-toothpaste",
@@ -2110,7 +2157,7 @@
       }
     ],
     "packaging": "1 US gallon jug / 5 US gallon pail / 55 US gallon drum",
-    "imageCaption": "Manufacturer product image; the selected package may differ.",
+    "imageCaption": "Photo shows the 1 US gallon jug. Pail and drum packaging will look different.",
     "featured": true,
     "image": "/images/products/brands/everest-advanced-ck-4-synthetic-blend-diesel-15w-40.webp"
   },
@@ -2145,7 +2192,7 @@
       }
     ],
     "packaging": "1 US gallon jug / 5 US gallon pail / 55 US gallon drum",
-    "imageCaption": "Manufacturer product image; the selected package may differ.",
+    "imageCaption": "Photo shows the 1 US gallon jug. Pail and drum packaging will look different.",
     "featured": false,
     "image": "/images/products/brands/mobil-delvac-1300-super-15w-40.webp"
   },
@@ -2180,7 +2227,7 @@
       }
     ],
     "packaging": "1 US gallon jug / 5 US gallon pail / 55 US gallon drum",
-    "imageCaption": "Manufacturer product image; the selected package may differ.",
+    "imageCaption": "Photo shows the 1 US gallon jug. Pail and drum packaging will look different.",
     "featured": true,
     "image": "/images/products/brands/shell-rotella-t4-triple-protection-15w-40.webp"
   }
