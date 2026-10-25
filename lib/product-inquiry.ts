@@ -8,5 +8,5 @@ export function getProductPackage(product: Product, packageId?: string | string[
 
 export function getInquiryMessage(product: Product, packageId?: string | string[]) {
   const selected = getProductPackage(product, packageId);
-  return `Hello, I would like a quote for ${product.name}${product.sku ? ` (SKU: ${product.sku})` : ""}.${selected ? `\nPackage: ${selected.label}${selected.manufacturerPartNumber ? ` (Manufacturer part: ${selected.manufacturerPartNumber})` : ""}.` : ""}`;
+  return `Hello, I would like a quote for ${product.name}${product.sku ? ` (SKU: ${product.sku})` : ""}.${selected ? `\nPackage: ${selected.label}${selected.manufacturerPartNumber ? ` (Manufacturer part: ${selected.manufacturerPartNumber})` : ""}.` : ""}${product.fitmentNote ? "\nVehicle / seat make and model:\nYear / engine (if applicable):\nExisting part number / dimensions:" : ""}`;
 }

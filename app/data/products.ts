@@ -1,3 +1,4 @@
+import truckProducts from "./truck-products.json";
 import brandedProducts from "./branded-products.json";
 
 export type ProductCategory =
@@ -15,6 +16,7 @@ export type Product = {
   image?: string;
   imageCaption?: string;
   imageNote?: string;
+  fitmentNote?: string;
   manufacturerSizes?: string[];
   brand?: string;
   selectionCode?: string;
@@ -37,6 +39,7 @@ export type Product = {
 };
 
 export const products: Product[] = [
+  ...(truckProducts as Product[]),
   ...(brandedProducts as Product[]),
   // ENGINE OILS
   {

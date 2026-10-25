@@ -19,3 +19,9 @@ To maintain a listing, update its data and source record, place the photo under 
 - Case quantities and minimum orders for branded products are explicitly marked as confirmed with a quote where supplier information is not available.
 - 44 listings retain representative-photo labels: Mobil 1 (32), Mobil Super (7), Everest high-mileage grades without an exact photo (2), and the three diesel listings with multiple package choices. Mobil’s direct image endpoint rejected this review’s download request. Retain existing representative photos until exact assets can be verified.
 - Source and verification records are maintained in `product-sources.json`. No stock, pricing, supplier case counts or minimum orders were inferred from manufacturer images.
+
+### Semi-truck parts (local review)
+
+Added five quote-only entries under Auto Parts → Semi-Truck Parts: brake shoe kits, brake drums, radiators, cloth seat covers, and Cordura seat covers. Existing passenger-car listings remain unchanged. Images are locally optimized WebP reference photos, with original sources recorded in product-sources.json. They do not establish stocked brands, universal fitment, price, or availability. Seat covers explicitly exclude the seat shown in the photo. Confirm image reuse permissions before publishing these supplier/manufacturer photos, or replace with owned product photography.
+
+Product pages include application-specific fitment instructions. Direct contact and WhatsApp inquiry drafts ask for vehicle/seat details and existing part numbers. No external messages are sent by these changes.

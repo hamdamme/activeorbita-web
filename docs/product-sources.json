@@ -662,5 +662,35 @@
     "sourceUrl": "https://www.shell.us/business/fuels-and-lubricants/lubricants-for-business/products/shell-rotella-heavy-duty-engine-oils-for-fleets/shell-rotella-t4-triple-protection-heavy-duty-engine-oil.html",
     "imageSourceUrl": "https://www.shell.us/business/fuels-and-lubricants/lubricants-for-business/products/shell-rotella-heavy-duty-engine-oils-for-fleets/shell-rotella-t4-triple-protection-heavy-duty-engine-oil/_jcr_content/root/main/section_copy/standalone_asset.shellimg.jpeg/1728996355487/t4-10w40-1gal-us-lr.jpeg?imdensity=1&impolicy=amidala-image&imwidth=392",
     "checkedOn": "2026-10-12"
+  },
+  "semi-truck-brake-shoe-kits": {
+    "sourceUrl": "https://www.truckspring.com/products/Brake-Shoe-Kit-16-12-Inch-Meritor-FLOE-7-Inch-23K__NNK4707Q630.aspx",
+    "imageSourceUrl": "https://images.truckspring.com/structured/mtss/brake-shoes/nnk4707q630/nnk4707q630-lrg-.jpg",
+    "checkedOn": "2026-10-24",
+    "note": "Representative reference image, not a confirmed stocked SKU or fitment. Source access does not establish a license; confirm commercial reuse permission before publishing."
+  },
+  "semi-truck-brake-drums": {
+    "sourceUrl": "https://www.fleetrite.com/parts/brakes/drums-and-rotors/brake-drum/flt4476b-fleetrite-brake-drum",
+    "imageSourceUrl": "https://navistar-cdn.syndigo.com/e9bd20f1-d2db-49b7-b6c7-1cd9bd4c4e78.png",
+    "checkedOn": "2026-10-24",
+    "note": "Representative reference image, not a confirmed stocked SKU or fitment. Source access does not establish a license; confirm commercial reuse permission before publishing."
+  },
+  "semi-truck-radiators": {
+    "sourceUrl": "https://www.fleetriteacparts.com/products/get-product-detail/24-80530",
+    "imageSourceUrl": "https://aae-img.s3.us-east-2.amazonaws.com/OET/assets/theme/images/products/24-80530.jpg",
+    "checkedOn": "2026-10-24",
+    "note": "Representative reference image, not a confirmed stocked SKU or fitment. Source access does not establish a license; confirm commercial reuse permission before publishing."
+  },
+  "semi-truck-cloth-seat-covers": {
+    "sourceUrl": "https://www.ultraseat.com/convoy-semi-truck-cover-kits",
+    "imageSourceUrl": "https://www.ultraseat.com/uploads/thumbnails/concoyMK2ClothFrontRolled.jpg.5b2d9fff.jpg",
+    "checkedOn": "2026-10-24",
+    "note": "Representative reference image, not a confirmed stocked SKU or fitment. Source access does not establish a license; confirm commercial reuse permission before publishing."
+  },
+  "semi-truck-cordura-seat-covers": {
+    "sourceUrl": "https://www.ultraseat.com/convoy-semi-truck-cover-kits",
+    "imageSourceUrl": "https://www.ultraseat.com/uploads/thumbnails/CorduraRolledNoLogo.jpg.938af1c6.jpg",
+    "checkedOn": "2026-10-24",
+    "note": "Representative reference image, not a confirmed stocked SKU or fitment. Source access does not establish a license; confirm commercial reuse permission before publishing."
   }
 }

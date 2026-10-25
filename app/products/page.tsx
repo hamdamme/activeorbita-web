@@ -19,7 +19,7 @@ export default function ProductsPage() {
           </h1>
 
           <p className="mt-3 max-w-2xl text-base text-gray-600">
-            Explore motor oils from Mobil, Everest, Castrol and Shell, alongside personal care from Old Spice, Degree, Crest and Oral-B.
+            Explore motor oils from Mobil, Everest, Castrol and Shell, plus semi-truck brake parts, radiators and seat covers, alongside personal care from Old Spice, Degree, Crest and Oral-B.
           </p>
           <a href="#categories" className="mt-4 inline-block text-sm font-medium underline underline-offset-4">Browse by category ↓</a>
         </div>
@@ -54,7 +54,7 @@ export default function ProductsPage() {
               category === "Motor Oil & Transmission Fluids"
                 ? "Premium engine oils, transmission fluids, lubricants, and automotive chemicals for commercial fleets, distributors, and wholesale buyers."
                 : category === "Auto Parts"
-                ? "Quality replacement parts and maintenance components for passenger vehicles, trucks, and commercial fleets."
+                ? "Semi-truck brake shoes, drums, radiators and seat covers, alongside replacement parts for passenger vehicles and commercial fleets."
                 : "Old Spice and Degree antiperspirants, Crest toothpaste, Oral-B toothbrushes, household essentials, and everyday retail items.";
 
             return (

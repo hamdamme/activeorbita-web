@@ -1,0 +1,107 @@
+[
+  {
+    "id": "truck-shoes",
+    "name": "Semi-Truck Brake Shoe Kits",
+    "slug": "semi-truck-brake-shoe-kits",
+    "shortDescription": "Brake shoe kits for heavy-duty truck and trailer drum-brake inquiries.",
+    "description": "Brake shoe kits for heavy-duty truck and trailer drum-brake inquiries. Send the axle position, brake dimensions, and existing part or FMSI number. Lining, hardware, and kit contents must be confirmed before ordering. Availability, supplied brand, and pricing are confirmed with your quote.",
+    "price": "Request Quote",
+    "category": "Auto Parts",
+    "subcategory": "Semi-Truck Parts",
+    "image": "/images/products/truck-parts/shoes.webp",
+    "imageCaption": "Representative product photo. Exact brand, configuration, and fit are confirmed with your quote.",
+    "fitmentNote": "Send the axle position, brake dimensions, and existing part or FMSI number. Lining, hardware, and kit contents must be confirmed before ordering.",
+    "sku": "AO-TRUCK-SHOES",
+    "moq": "Confirmed with your quote",
+    "packaging": "Confirmed with your quote",
+    "specs": [
+      "Application-specific fitment",
+      "Provide your existing part or seat model number",
+      "Availability confirmed on inquiry"
+    ]
+  },
+  {
+    "id": "truck-drum",
+    "name": "Semi-Truck Brake Drums",
+    "slug": "semi-truck-brake-drums",
+    "shortDescription": "Replacement brake drum inquiries for semi-trucks and trailers.",
+    "description": "Replacement brake drum inquiries for semi-trucks and trailers. Send the existing part number, brake diameter and width, bolt pattern, and axle position. Drum dimensions and vehicle compatibility must be confirmed before ordering. Availability, supplied brand, and pricing are confirmed with your quote.",
+    "price": "Request Quote",
+    "category": "Auto Parts",
+    "subcategory": "Semi-Truck Parts",
+    "image": "/images/products/truck-parts/drum.webp",
+    "imageCaption": "Representative product photo. Exact brand, configuration, and fit are confirmed with your quote.",
+    "fitmentNote": "Send the existing part number, brake diameter and width, bolt pattern, and axle position. Drum dimensions and vehicle compatibility must be confirmed before ordering.",
+    "sku": "AO-TRUCK-DRUM",
+    "moq": "Confirmed with your quote",
+    "packaging": "Confirmed with your quote",
+    "specs": [
+      "Application-specific fitment",
+      "Provide your existing part or seat model number",
+      "Availability confirmed on inquiry"
+    ]
+  },
+  {
+    "id": "truck-radiator",
+    "name": "Semi-Truck Radiators",
+    "slug": "semi-truck-radiators",
+    "shortDescription": "Engine-cooling radiator inquiries for commercial trucks.",
+    "description": "Engine-cooling radiator inquiries for commercial trucks. Send the truck make, model, year, engine, and existing radiator part number. Core dimensions, mounting points, and hose connections must match your application. Availability, supplied brand, and pricing are confirmed with your quote.",
+    "price": "Request Quote",
+    "category": "Auto Parts",
+    "subcategory": "Semi-Truck Parts",
+    "image": "/images/products/truck-parts/radiator.webp",
+    "imageCaption": "Representative product photo. Exact brand, configuration, and fit are confirmed with your quote.",
+    "fitmentNote": "Send the truck make, model, year, engine, and existing radiator part number. Core dimensions, mounting points, and hose connections must match your application.",
+    "sku": "AO-TRUCK-RADIATOR",
+    "moq": "Confirmed with your quote",
+    "packaging": "Confirmed with your quote",
+    "specs": [
+      "Application-specific fitment",
+      "Provide your existing part or seat model number",
+      "Availability confirmed on inquiry"
+    ]
+  },
+  {
+    "id": "truck-cover-cloth",
+    "name": "Semi-Truck Cloth Seat Covers",
+    "slug": "semi-truck-cloth-seat-covers",
+    "shortDescription": "Cloth seat-cover inquiries for commercial truck cabs.",
+    "description": "Cloth seat-cover inquiries for commercial truck cabs. Send the seat manufacturer and model, cushion dimensions, and armrest arrangement. The reference photo shows an Ultraseat Convoy cover; fit is not universal. Seat not included. Availability, supplied brand, and pricing are confirmed with your quote.",
+    "price": "Request Quote",
+    "category": "Auto Parts",
+    "subcategory": "Semi-Truck Parts",
+    "image": "/images/products/truck-parts/cover-cloth.webp",
+    "imageCaption": "Representative product photo. Exact brand, configuration, and fit are confirmed with your quote. Seat shown for illustration; seat not included.",
+    "fitmentNote": "Send the seat manufacturer and model, cushion dimensions, and armrest arrangement. The reference photo shows an Ultraseat Convoy cover; fit is not universal. Seat not included.",
+    "sku": "AO-TRUCK-COVER-CLOTH",
+    "moq": "Confirmed with your quote",
+    "packaging": "Confirmed with your quote",
+    "specs": [
+      "Application-specific fitment",
+      "Provide your existing part or seat model number",
+      "Availability confirmed on inquiry"
+    ]
+  },
+  {
+    "id": "truck-cover-cordura",
+    "name": "Semi-Truck Cordura Seat Covers",
+    "slug": "semi-truck-cordura-seat-covers",
+    "shortDescription": "Cordura seat-cover inquiries for commercial truck cabs.",
+    "description": "Cordura seat-cover inquiries for commercial truck cabs. Send the seat manufacturer and model, cushion dimensions, and armrest arrangement. The reference photo shows an Ultraseat Convoy cover; fit is not universal. Material and color confirmed with your quote. Seat not included. Availability, supplied brand, and pricing are confirmed with your quote.",
+    "price": "Request Quote",
+    "category": "Auto Parts",
+    "subcategory": "Semi-Truck Parts",
+    "image": "/images/products/truck-parts/cover-cordura.webp",
+    "imageCaption": "Representative product photo. Exact brand, configuration, and fit are confirmed with your quote. Seat shown for illustration; seat not included.",
+    "fitmentNote": "Send the seat manufacturer and model, cushion dimensions, and armrest arrangement. The reference photo shows an Ultraseat Convoy cover; fit is not universal. Material and color confirmed with your quote. Seat not included.",
+    "sku": "AO-TRUCK-COVER-CORDURA",
+    "moq": "Confirmed with your quote",
+    "packaging": "Confirmed with your quote",
+    "specs": [
+      "Application-specific fitment",
+      "Provide your existing part or seat model number",
+      "Availability confirmed on inquiry"
+    ]
+  }
+]

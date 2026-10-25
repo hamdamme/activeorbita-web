@@ -56,6 +56,10 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
                 <p className="mt-3 text-sm leading-6 text-gray-600">These are manufacturer references. Tell us your preferred size; availability and wholesale case quantities are confirmed with your quote.</p>
               </section>
             ) : null}
+            {product.fitmentNote && <section aria-label="Fitment information" className="mt-6 rounded-2xl border border-gray-200 bg-gray-50 p-5">
+              <h2 className="text-sm font-semibold">Confirm the right fit</h2>
+              <p className="mt-2 text-sm leading-6 text-gray-600">{product.fitmentNote}</p>
+            </section>}
             <ProductOrder product={product} />
             <section className="mt-10 border-t border-gray-200 pt-6">
               <h2 className="text-sm font-semibold uppercase tracking-wide">Product Details</h2>
