@@ -45,7 +45,7 @@ export const metadata = pageMetadata('Wholesale Motor Oil, Auto Parts & Personal
 export default function Home() {
   return (
     <main className="bg-white text-gray-900">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeStructuredData({ "@context": "https://schema.org", "@type": "Organization", "@id": `${siteUrl}/#organization`, name: "Active Orbit INC", url: siteUrl, telephone: "+1-773-882-8507", email: "info@activeorbita.com" }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeStructuredData({ "@context": "https://schema.org", "@type": "Organization", "@id": `${siteUrl}/#organization`, name: "Active Orbit INC", logo: `${siteUrl}/images/brand/active-orbit-original.png`, url: siteUrl, telephone: "+1-773-882-8507", email: "info@activeorbita.com" }) }} />
       <section className="border-b border-gray-200 bg-gradient-to-b from-gray-50 to-white">
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 py-14 lg:grid-cols-[1.2fr_1fr] lg:px-10 lg:py-20">
           <div>

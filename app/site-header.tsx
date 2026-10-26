@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useRef, useState } from "react";
+import CompanyLogo from "./company-logo";
 import BasketLink from "./quote/basket-link";
 import { Menu, X } from "lucide-react";
 
@@ -48,8 +49,9 @@ function HeaderNavigation({ pathname }: { pathname: string }) {
       }}
     >
       <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-2 px-4 py-3 sm:px-6 lg:px-10">
-        <Link href="/" onClick={() => setOpen(false)} className="shrink-0 text-sm font-semibold tracking-wide sm:text-lg">
-          Active Orbit INC
+        <Link href="/" aria-label="Active Orbit Inc home" title="Active Orbit Inc" onClick={() => setOpen(false)} className="inline-flex shrink-0 items-center gap-2 rounded focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gray-900">
+          <CompanyLogo priority />
+          <span className="max-w-20 text-sm font-semibold leading-tight sm:max-w-none sm:text-base">Active Orbit Inc</span>
         </Link>
 
         <nav aria-label="Main navigation" className="hidden items-center gap-4 text-sm font-medium text-gray-700 lg:flex">

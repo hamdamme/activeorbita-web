@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { siteUrl, siteName, siteDescription } from "@/lib/seo";
 import Link from "next/link";
+import CompanyLogo from "./company-logo";
 import SiteHeader from "./site-header";
 
 export const metadata: Metadata = {
@@ -27,7 +28,7 @@ export default function RootLayout({
           <footer className="border-t border-gray-200 bg-white">
             <div className="mx-auto flex max-w-7xl flex-col gap-6 px-6 py-10 lg:px-10 md:flex-row md:items-center md:justify-between">
               <div>
-                <p className="text-base font-semibold">Active Orbit INC</p>
+                <Link href="/" aria-label="Active Orbit INC home" className="inline-flex items-center gap-3 rounded focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gray-900"><CompanyLogo /><span className="text-base font-semibold">Active Orbit Inc</span></Link>
                 <p className="mt-2 text-sm text-gray-600">
                   Wholesale motor oils, automotive products, and personal care essentials.
                 </p>
