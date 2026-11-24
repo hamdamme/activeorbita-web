@@ -31,7 +31,7 @@ function HeaderNavigation({ pathname }: { pathname: string }) {
         href={href}
         aria-current={pathname === href ? "page" : href !== "/" && pathname.startsWith(`${href}/`) ? "location" : undefined}
         onClick={() => setOpen(false)}
-        className="min-h-11 rounded px-2 py-3 transition aria-[current]:bg-gray-100 aria-[current]:text-black hover:text-black focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gray-900"
+        className="min-h-11 rounded px-2 py-3 transition aria-[current]:bg-sky-50 aria-[current]:text-sky-800 hover:text-sky-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gray-900"
       >
         {label}
       </Link>
@@ -60,7 +60,7 @@ function HeaderNavigation({ pathname }: { pathname: string }) {
 
         <div className="flex items-center gap-2">
           <BasketLink />
-          <Link href="/contact" onClick={() => setOpen(false)} className="hidden rounded-full border border-gray-900 px-4 py-2 text-sm font-medium transition hover:bg-gray-900 hover:text-white xl:inline-flex">
+          <Link href="/contact" onClick={() => setOpen(false)} className="hidden rounded-lg bg-sky-700 px-4 py-2 text-sm font-medium text-white transition hover:bg-sky-800 xl:inline-flex">
             Request a Quote
           </Link>
           <button
@@ -79,7 +79,7 @@ function HeaderNavigation({ pathname }: { pathname: string }) {
         <nav id="mobile-navigation" aria-label="Mobile navigation" hidden={!open} className="max-h-[calc(100dvh-5rem)] w-full overflow-y-auto border-t border-gray-200 pt-4 text-sm font-medium text-gray-700 lg:hidden">
           <div className="flex flex-col gap-2">
             {navigationLinks()}
-            <Link href="/contact" onClick={() => setOpen(false)} className="mt-2 self-start rounded-full bg-gray-900 px-5 py-3 text-white transition hover:bg-gray-700">
+            <Link href="/contact" onClick={() => setOpen(false)} className="mt-2 self-start rounded-lg bg-sky-700 px-5 py-3 text-white transition hover:bg-sky-800">
               Request a Quote
             </Link>
             <a href="tel:+17738828507" className="min-h-11 self-start rounded px-2 py-3 underline underline-offset-4">Call 773-882-8507</a>
