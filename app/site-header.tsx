@@ -31,7 +31,7 @@ function HeaderNavigation({ pathname }: { pathname: string }) {
         href={href}
         aria-current={pathname === href ? "page" : href !== "/" && pathname.startsWith(`${href}/`) ? "location" : undefined}
         onClick={() => setOpen(false)}
-        className="min-h-11 rounded px-2 py-3 transition aria-[current]:bg-sky-50 aria-[current]:text-sky-800 hover:text-sky-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gray-900"
+        className="min-h-11 rounded px-2 py-3 transition aria-[current]:bg-neutral-100 aria-[current]:text-neutral-900 hover:text-neutral-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-neutral-900"
       >
         {label}
       </Link>
@@ -40,7 +40,7 @@ function HeaderNavigation({ pathname }: { pathname: string }) {
 
   return (
     <header
-      className="sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur"
+      className="sticky top-0 z-50 border-b border-neutral-200 bg-white/95 backdrop-blur"
       onKeyDown={(event) => {
         if (event.key === "Escape" && open) {
           setOpen(false);
@@ -49,18 +49,18 @@ function HeaderNavigation({ pathname }: { pathname: string }) {
       }}
     >
       <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-2 px-4 py-3 sm:px-6 lg:px-10">
-        <Link href="/" aria-label="Active Orbit Inc home" title="Active Orbit Inc" onClick={() => setOpen(false)} className="inline-flex shrink-0 items-center gap-2 rounded focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gray-900">
+        <Link href="/" aria-label="Active Orbit Inc home" title="Active Orbit Inc" onClick={() => setOpen(false)} className="inline-flex shrink-0 items-center gap-2 rounded focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-neutral-900">
           <CompanyLogo priority />
           <span className="max-w-20 text-sm font-semibold leading-tight sm:max-w-none sm:text-base">Active Orbit Inc</span>
         </Link>
 
-        <nav aria-label="Main navigation" className="hidden items-center gap-4 text-sm font-medium text-gray-700 lg:flex">
+        <nav aria-label="Main navigation" className="hidden items-center gap-4 text-sm font-medium text-neutral-700 lg:flex">
           {navigationLinks()}
         </nav>
 
         <div className="flex items-center gap-2">
           <BasketLink />
-          <Link href="/contact" onClick={() => setOpen(false)} className="hidden rounded-lg bg-sky-700 px-4 py-2 text-sm font-medium text-white transition hover:bg-sky-800 xl:inline-flex">
+          <Link href="/contact" onClick={() => setOpen(false)} className="hidden rounded-lg bg-neutral-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-neutral-800 xl:inline-flex">
             Request a Quote
           </Link>
           <button
@@ -70,16 +70,16 @@ function HeaderNavigation({ pathname }: { pathname: string }) {
             aria-expanded={open}
             aria-controls="mobile-navigation"
             onClick={() => setOpen(!open)}
-            className="rounded-full border border-gray-200 p-3 transition hover:bg-gray-50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gray-900 lg:hidden"
+            className="rounded-full border border-neutral-200 p-3 transition hover:bg-neutral-50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-neutral-900 lg:hidden"
           >
             {open ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}
           </button>
         </div>
 
-        <nav id="mobile-navigation" aria-label="Mobile navigation" hidden={!open} className="max-h-[calc(100dvh-5rem)] w-full overflow-y-auto border-t border-gray-200 pt-4 text-sm font-medium text-gray-700 lg:hidden">
+        <nav id="mobile-navigation" aria-label="Mobile navigation" hidden={!open} className="max-h-[calc(100dvh-5rem)] w-full overflow-y-auto border-t border-neutral-200 pt-4 text-sm font-medium text-neutral-700 lg:hidden">
           <div className="flex flex-col gap-2">
             {navigationLinks()}
-            <Link href="/contact" onClick={() => setOpen(false)} className="mt-2 self-start rounded-lg bg-sky-700 px-5 py-3 text-white transition hover:bg-sky-800">
+            <Link href="/contact" onClick={() => setOpen(false)} className="mt-2 self-start rounded-lg bg-neutral-900 px-5 py-3 text-white transition hover:bg-neutral-800">
               Request a Quote
             </Link>
             <a href="tel:+17738828507" className="min-h-11 self-start rounded px-2 py-3 underline underline-offset-4">Call 773-882-8507</a>
