@@ -25,3 +25,13 @@ To maintain a listing, update its data and source record, place the photo under 
 Added five quote-only entries under Auto Parts → Semi-Truck Parts: brake shoe kits, brake drums, radiators, cloth seat covers, and Cordura seat covers. Existing passenger-car listings remain unchanged. Images are locally optimized WebP reference photos, with original sources recorded in product-sources.json. They do not establish stocked brands, universal fitment, price, or availability. Seat covers explicitly exclude the seat shown in the photo. Confirm image reuse permissions before publishing these supplier/manufacturer photos, or replace with owned product photography.
 
 Product pages include application-specific fitment instructions. Direct contact and WhatsApp inquiry drafts ask for vehicle/seat details and existing part numbers. No external messages are sent by these changes.
+
+## Homepage and image refresh — 2026-11-23
+
+The homepage now uses brand-blue accents, a product-photo hero, and visual category cards before featured products. Existing navigation, quote basket and inquiry routes remain available.
+
+Higher-resolution source files now serve the Everest Advanced CK-4 15W-40 listing (871 × 1080, previously 726 × 900) and brake drum and radiator listings (1500 × 1500, previously 900 × 900). Original source files are preserved, with responsive delivery through Next.js Image. The prior WebP files remain available. These photos remain representative; the Everest jug does not depict the pail or drum options. Manufacturer reference imagery does not establish stock or commercial reuse permission.
+
+Crest Cavity Protection's source remains 640 × 640, so downloading it again would not add detail. Mobil's recorded original image endpoint returned HTTP 403; its existing family photo remains labeled representative. Further replacements require a verified clearer source or supplier photography.
+
+Seat-cover sources are already at their original 520 × 867 resolution. The brake-shoe source now returns only 200 × 150, so the existing photo was retained instead of downgrading it.

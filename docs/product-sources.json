@@ -651,7 +651,10 @@
   "everest-advanced-ck-4-synthetic-blend-diesel-15w-40": {
     "sourceUrl": "https://everestoil.com/product/Advanced_CK-4_Heavy_Duty_Synthetic_Blend_SAE_15W-40_Diesel_Engine_Oil_API_CK-4_SN",
     "imageSourceUrl": "https://everestoil.com/public/storage/products/Everest%20HD%20Syn%20Blend%2015W-40%20CK-4%20SN%201-Gal%2006-24-19_61b8577f0aabb.jpg",
-    "checkedOn": "2026-10-12"
+    "checkedOn": "2026-10-12",
+    "imageReviewedOn": "2026-11-23",
+    "localImage": "/images/products/brands/everest-diesel-15w-40-original.jpg",
+    "imageQualityNote": "Original manufacturer image retained without resizing; Next.js generates responsive delivery sizes. Representative packaging or fitment labels retained."
   },
   "mobil-delvac-1300-super-15w-40": {
     "sourceUrl": "https://www.mobil.com/en/lubricants/for-businesses/heavy-duty-lubricants/products/mobil-delvac-1300-super-15w-40",
@@ -673,13 +676,19 @@
     "sourceUrl": "https://www.fleetrite.com/parts/brakes/drums-and-rotors/brake-drum/flt4476b-fleetrite-brake-drum",
     "imageSourceUrl": "https://navistar-cdn.syndigo.com/e9bd20f1-d2db-49b7-b6c7-1cd9bd4c4e78.png",
     "checkedOn": "2026-10-24",
-    "note": "Representative reference image, not a confirmed stocked SKU or fitment. Source access does not establish a license; confirm commercial reuse permission before publishing."
+    "note": "Representative reference image, not a confirmed stocked SKU or fitment. Source access does not establish a license; confirm commercial reuse permission before publishing.",
+    "imageReviewedOn": "2026-11-23",
+    "localImage": "/images/products/truck-parts/drum-original.png",
+    "imageQualityNote": "Original manufacturer image retained without resizing; Next.js generates responsive delivery sizes. Representative packaging or fitment labels retained."
   },
   "semi-truck-radiators": {
     "sourceUrl": "https://www.fleetriteacparts.com/products/get-product-detail/24-80530",
     "imageSourceUrl": "https://aae-img.s3.us-east-2.amazonaws.com/OET/assets/theme/images/products/24-80530.jpg",
     "checkedOn": "2026-10-24",
-    "note": "Representative reference image, not a confirmed stocked SKU or fitment. Source access does not establish a license; confirm commercial reuse permission before publishing."
+    "note": "Representative reference image, not a confirmed stocked SKU or fitment. Source access does not establish a license; confirm commercial reuse permission before publishing.",
+    "imageReviewedOn": "2026-11-23",
+    "localImage": "/images/products/truck-parts/radiator-original.jpg",
+    "imageQualityNote": "Original 1500 by 1500 manufacturer source, previously delivered from a 900 by 900 copy. Representative fitment label retained."
   },
   "semi-truck-cloth-seat-covers": {
     "sourceUrl": "https://www.ultraseat.com/convoy-semi-truck-cover-kits",
